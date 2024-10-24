@@ -16,9 +16,38 @@ import Dart from '../assets/Images/dart.png'
 import Flutter from '../assets/Images/flutter.png'
 import GoogleApi from '../assets/Images/GApi.png'
 
+import Proj1_1 from '../assets/ProjectImage/proj1_1.png'
+import Proj1_2 from '../assets/ProjectImage/proj1_2.png'
+import Proj1_3 from '../assets/ProjectImage/proj1_3.png'
+import Proj1_4 from '../assets/ProjectImage/proj1_4.png'
+import Proj1_5 from '../assets/ProjectImage/proj1_5.png'
+import Proj1_6 from '../assets/ProjectImage/proj1_6.jpg'
+
+import Proj3_1 from '../assets/ProjectImage/proj3_1.png'
+import Proj3_2 from '../assets/ProjectImage/proj3_2.png'
+import Proj3_3 from '../assets/ProjectImage/proj3_3.png'
+import Proj3_4 from '../assets/ProjectImage/proj3_4.png'
+import Proj3_5 from '../assets/ProjectImage/proj3_5.png'
+import Proj3_6 from '../assets/ProjectImage/proj3_6.png'
+import Proj3_7 from '../assets/ProjectImage/proj3_7.png'
+import Proj3_8 from '../assets/ProjectImage/proj3_8.png'
+import Proj3_9 from '../assets/ProjectImage/proj3_9.png'
+import Proj3_10 from '../assets/ProjectImage/proj3_10.jpg'
+
 export const MyProjects = [
     {
         id: '01.',
+        currIdx : 1,
+        title: "WAMS 2025",
+        image : Proj1_1,
+        desc1 : "● Soul Healer is a Flutter-based music app that streams music from YouTube and allows classification by artist, genre, and language.",
+        desc2 : "● YouTube Integration helps Seamless music search and playback using the YouTube API.",
+        desc3 : "● Favorites & Saved state are present for Users to add songs to their favorites with persistent state across sessions.",
+       
+    },
+    {
+        id: '02.',
+        currIdx : 2,
         title: "Music App",
         image : Soul_ss,
         desc1 : "● Soul Healer is a Flutter-based music app that streams music from YouTube and allows classification by artist, genre, and language.",
@@ -28,7 +57,8 @@ export const MyProjects = [
         desc5 : "● It isBuilt using popular packages like just_audio, provider, youtube_explode_dart, flutter_local_notifications, and more.",
     },
     {
-      id: '02.',
+      id: '03.',
+      currIdx : 3,
       title: "Ecommerce Website",
       image : Ecommerce_ss,
       desc1 : "● Sahil is a full stack Ecommerce app made with MERN stack.",
@@ -36,7 +66,8 @@ export const MyProjects = [
       desc3 : "● Fully Responsive Web-Page for all kinds of devices.",
     },
     {
-        id: '03.',
+        id: '04.',
+        currIdx : 4,
         title: "Portfolio Website",
         image : PortFolio_ss,
         desc1 : "● Sahil Raza, a Portfolio Web app is made with ReactJs.",
@@ -91,3 +122,232 @@ export const DemoData = [
     ],
   },
 ];
+
+export const ProjectData = [
+  {
+    id : 1,
+    title : 'Wams 2025',
+    desc : 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatibus sed at impedit quisquam. Officia ab architecto, quas facere magni omnis minus? Temporibus, sapiente rerum, saepe, nulla odit est dolores atque aspernatur minima labore illum cupiditate molestias molestiae eveniet asperiores tenetur consectetur necessitatibus alias nobis beatae? Atque voluptates autem qui placeat.',
+    duration : 'Two months',
+    dates : 'Sept 2023 - Nov 2023',
+    stacks : 'ReactJs, HTML, CSS, JavaScript, NodeJs, JWT',
+    frontEnd : 'https://github.com/SahillRazaa/Sahil_Ecommerce_frontend',
+    backEnd : 'https://github.com/SahillRazaa/Sahil_Ecommerce_frontend',
+    explainations : [
+      {
+        id1 : 1,
+        explain : [
+          {
+            id11 : 1,
+            image : Proj1_1,
+            explain1 : '● Lorem ipsum, dolor sit amet consectetur adipisicing elit. Facere, neque.',
+            explain2 : '● Lorem ipsum, dolor sit amet consectetur adipisicing elit. Facere, neque.',
+            explain3 : '● Lorem ipsum, dolor sit amet consectetur adipisicing elit. Facere, neque.',
+          },
+          {
+            id11 :2,
+            image : Proj1_2,
+            explain1 : '● Lorem ipsum, dolor sit amet consectetur adipisicing elit. Facere, neque.',
+            explain2 : '● Lorem ipsum, dolor sit amet consectetur adipisicing elit. Facere, neque.',
+            explain3 : '● Lorem ipsum, dolor sit amet consectetur adipisicing elit. Facere, neque.',
+          },
+        ],
+      },
+      {
+        id1 : 2,
+        explain : [
+          {
+            id11 : 1,
+            image : Proj1_3,
+            explain1 : '● Lorem ipsum, dolor sit amet consectetur adipisicing elit. Facere, neque.',
+            explain2 : '● Lorem ipsum, dolor sit amet consectetur adipisicing elit. Facere, neque.',
+            explain3 : '● Lorem ipsum, dolor sit amet consectetur adipisicing elit. Facere, neque.',
+          },
+          {
+            id11 : 2,
+            image : Proj1_4,
+            explain1 : '● Lorem ipsum, dolor sit amet consectetur adipisicing elit. Facere, neque.',
+            explain2 : '● Lorem ipsum, dolor sit amet consectetur adipisicing elit. Facere, neque.',
+            explain3 : '● Lorem ipsum, dolor sit amet consectetur adipisicing elit. Facere, neque.',
+          },
+        ],
+      },
+      {
+        id1 : 3,
+        explain : [
+          {
+            id11 : 1,
+            image : Proj1_5,
+            explain1 : '● Lorem ipsum, dolor sit amet consectetur adipisicing elit. Facere, neque.',
+            explain2 : '● Lorem ipsum, dolor sit amet consectetur adipisicing elit. Facere, neque.',
+            explain3 : '● Lorem ipsum, dolor sit amet consectetur adipisicing elit. Facere, neque.',
+          },
+          {
+            id11 : 2,
+            image : Proj1_6,
+            explain1 : '● Lorem ipsum, dolor sit amet consectetur adipisicing elit. Facere, neque.',
+            explain2 : '● Lorem ipsum, dolor sit amet consectetur adipisicing elit. Facere, neque.',
+            explain3 : '● Lorem ipsum, dolor sit amet consectetur adipisicing elit. Facere, neque.',
+          },
+        ],
+      },
+    ]
+  },
+  {
+    id : 2,
+    title : 'Soul Healer',
+    desc : 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatibus sed at impedit quisquam. Officia ab architecto, quas facere magni omnis minus? Temporibus, sapiente rerum, saepe, nulla odit est dolores atque aspernatur minima labore illum cupiditate molestias molestiae eveniet asperiores tenetur consectetur necessitatibus alias nobis beatae? Atque voluptates autem qui placeat.',
+    duration : 'Two months',
+    dates : 'Sept 2023 - Nov 2023',
+    stacks : 'ReactJs, HTML, CSS, JavaScript, NodeJs, JWT',
+    frontEnd : 'https://github.com/SahillRazaa/Sahil_Ecommerce_frontend',
+    backEnd : 'https://github.com/SahillRazaa/Sahil_Ecommerce_frontend',
+    explainations : [
+      {
+        id1 : 1,
+        explain : [
+          {
+            id11 : 1,
+            image : Soul_ss,
+            explain1 : '● Lorem ipsum, dolor sit amet consectetur adipisicing elit. Facere, neque.',
+            explain2 : '● Lorem ipsum, dolor sit amet consectetur adipisicing elit. Facere, neque.',
+            explain3 : '● Lorem ipsum, dolor sit amet consectetur adipisicing elit. Facere, neque.',
+          },
+          {
+            id11 :2,
+            image : Soul_ss,
+            explain1 : '● Lorem ipsum, dolor sit amet consectetur adipisicing elit. Facere, neque.',
+            explain2 : '● Lorem ipsum, dolor sit amet consectetur adipisicing elit. Facere, neque.',
+            explain3 : '● Lorem ipsum, dolor sit amet consectetur adipisicing elit. Facere, neque.',
+          },
+        ],
+      },
+      {
+        id1 : 2,
+        explain : [
+          {
+            id11 : 1,
+            image : Soul_ss,
+            explain1 : '● Lorem ipsum, dolor sit amet consectetur adipisicing elit. Facere, neque.',
+            explain2 : '● Lorem ipsum, dolor sit amet consectetur adipisicing elit. Facere, neque.',
+            explain3 : '● Lorem ipsum, dolor sit amet consectetur adipisicing elit. Facere, neque.',
+          },
+          {
+            id11 : 2,
+            image : Soul_ss,
+            explain1 : '● Lorem ipsum, dolor sit amet consectetur adipisicing elit. Facere, neque.',
+            explain2 : '● Lorem ipsum, dolor sit amet consectetur adipisicing elit. Facere, neque.',
+            explain3 : '● Lorem ipsum, dolor sit amet consectetur adipisicing elit. Facere, neque.',
+          },
+        ],
+      },
+    ]
+  },
+  {
+    id : 3,
+    title : 'Ecommerce website',
+    desc : 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatibus sed at impedit quisquam. Officia ab architecto, quas facere magni omnis minus? Temporibus, sapiente rerum, saepe, nulla odit est dolores atque aspernatur minima labore illum cupiditate molestias molestiae eveniet asperiores tenetur consectetur necessitatibus alias nobis beatae? Atque voluptates autem qui placeat.',
+    duration : 'Two months',
+    dates : 'Sept 2023 - Nov 2023',
+    stacks : 'ReactJs, HTML, CSS, JavaScript, NodeJs, JWT',
+    frontEnd : 'https://github.com/SahillRazaa/Sahil_Ecommerce_frontend',
+    backEnd : 'https://github.com/SahillRazaa/Sahil_Ecommerce_frontend',
+    explainations : [
+      {
+        id1 : 1,
+        explain : [
+          {
+            id11 : 1,
+            image : Proj3_1,
+            explain1 : '● Lorem ipsum, dolor sit amet consectetur adipisicing elit. Facere, neque.',
+            explain2 : '● Lorem ipsum, dolor sit amet consectetur adipisicing elit. Facere, neque.',
+            explain3 : '● Lorem ipsum, dolor sit amet consectetur adipisicing elit. Facere, neque.',
+          },
+          {
+            id11 :2,
+            image : Proj3_2,
+            explain1 : '● Lorem ipsum, dolor sit amet consectetur adipisicing elit. Facere, neque.',
+            explain2 : '● Lorem ipsum, dolor sit amet consectetur adipisicing elit. Facere, neque.',
+            explain3 : '● Lorem ipsum, dolor sit amet consectetur adipisicing elit. Facere, neque.',
+          },
+        ],
+      },
+      {
+        id1 : 2,
+        explain : [
+          {
+            id11 : 1,
+            image : Proj3_3,
+            explain1 : '● Lorem ipsum, dolor sit amet consectetur adipisicing elit. Facere, neque.',
+            explain2 : '● Lorem ipsum, dolor sit amet consectetur adipisicing elit. Facere, neque.',
+            explain3 : '● Lorem ipsum, dolor sit amet consectetur adipisicing elit. Facere, neque.',
+          },
+          {
+            id11 : 2,
+            image : Proj3_4,
+            explain1 : '● Lorem ipsum, dolor sit amet consectetur adipisicing elit. Facere, neque.',
+            explain2 : '● Lorem ipsum, dolor sit amet consectetur adipisicing elit. Facere, neque.',
+            explain3 : '● Lorem ipsum, dolor sit amet consectetur adipisicing elit. Facere, neque.',
+          },
+        ],
+      },
+      {
+        id1 : 4,
+        explain : [
+          {
+            id11 : 1,
+            image : Proj3_5,
+            explain1 : '● Lorem ipsum, dolor sit amet consectetur adipisicing elit. Facere, neque.',
+            explain2 : '● Lorem ipsum, dolor sit amet consectetur adipisicing elit. Facere, neque.',
+            explain3 : '● Lorem ipsum, dolor sit amet consectetur adipisicing elit. Facere, neque.',
+          },
+          {
+            id11 : 2,
+            image : Proj3_6,
+            explain1 : '● Lorem ipsum, dolor sit amet consectetur adipisicing elit. Facere, neque.',
+            explain2 : '● Lorem ipsum, dolor sit amet consectetur adipisicing elit. Facere, neque.',
+            explain3 : '● Lorem ipsum, dolor sit amet consectetur adipisicing elit. Facere, neque.',
+          },
+        ],
+      },
+      {
+        id1 : 2,
+        explain : [
+          {
+            id11 : 1,
+            image : Proj3_7,
+            explain1 : '● Lorem ipsum, dolor sit amet consectetur adipisicing elit. Facere, neque.',
+            explain2 : '● Lorem ipsum, dolor sit amet consectetur adipisicing elit. Facere, neque.',
+            explain3 : '● Lorem ipsum, dolor sit amet consectetur adipisicing elit. Facere, neque.',
+          },
+          {
+            id11 : 2,
+            image : Proj3_8,
+            explain1 : '● Lorem ipsum, dolor sit amet consectetur adipisicing elit. Facere, neque.',
+            explain2 : '● Lorem ipsum, dolor sit amet consectetur adipisicing elit. Facere, neque.',
+            explain3 : '● Lorem ipsum, dolor sit amet consectetur adipisicing elit. Facere, neque.',
+          },
+        ],
+      },
+      {
+        id1 : 2,
+        explain : [
+          {
+            id11 : 1,
+            image : Proj3_9,
+            explain1 : '● Lorem ipsum, dolor sit amet consectetur adipisicing elit. Facere, neque.',
+            explain2 : '● Lorem ipsum, dolor sit amet consectetur adipisicing elit. Facere, neque.',
+            explain3 : '● Lorem ipsum, dolor sit amet consectetur adipisicing elit. Facere, neque.',
+          },
+          {
+            id11 : 2,
+            image : Proj3_10,
+            explain1 : '● Lorem ipsum, dolor sit amet consectetur adipisicing elit. Facere, neque.',
+            explain2 : '● Lorem ipsum, dolor sit amet consectetur adipisicing elit. Facere, neque.',
+            explain3 : '● Lorem ipsum, dolor sit amet consectetur adipisicing elit. Facere, neque.',
+          },
+        ],
+      },
+    ]
+  }
+]

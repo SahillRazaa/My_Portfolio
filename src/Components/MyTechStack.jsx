@@ -140,8 +140,8 @@ const MyTechStack = () => {
                             <Link to="https://docs.flutter.dev/" target='_blank'><Stack src={GoogleApi}/></Link>
                             <Link to="https://www.mongodb.com/what-is-mongodb" target='_blank'><Stack src={MongoDB}/></Link>
                             <Link to="https://www.programiz.com/cpp-programming" target='_blank'><Stack src={CPlusImage}/></Link>
-                            <Link to="https://www.programiz.com/cpp-programming" target='_blank'><Stack src={CImage}/></Link>
-                            <Link to="https://www.programiz.com/cpp-programming" target='_blank'><Stack src={PythonImage}/></Link>
+                            <Link to="https://www.w3schools.com/c/index.php" target='_blank'><Stack src={CImage}/></Link>
+                            <Link to="https://www.python.org/doc/" target='_blank'><Stack src={PythonImage}/></Link>
                         </TechContainer>
                     </Wrapper>
                 </Container>

@@ -1,12 +1,9 @@
-import React, { useEffect, useState } from 'react';
+import React from 'react';
 import styled from 'styled-components';
-import { MyProjects, DemoData } from '../Project_data/data';
-import { maxitab, miniimobile, minilap, minitab } from '../responvise';
-import { Link } from 'react-router-dom';
-import RotatingLoader from './Loader';
-import RedCross from '../assets/Images/icons8-cross-48-1.png'
+import { MyProjects } from '../Project_data/data';
+import { maxitab, minilap, minitab } from '../responvise';
+import { useNavigate } from 'react-router-dom';
 
-// Styled components for styling the UI elements
 const Container = styled.div`
     padding : 0% 2%;
     padding-bottom : 3%
@@ -26,10 +23,14 @@ const Wrapper = styled.div`
     })}
 `
 const ImageContainer = styled.div`
+    display : flex;
+    align-items : center;
+    justify-content : center;
     flex : 1;
 `
+
 const Image = styled.img`
-    width : 73%;
+    width : ${props =>  props.currId === 2 ? '45%' : '73%'};
     border-radius : 20px;
     box-shadow : 0px 0px 10px 2px black;
 `
@@ -87,191 +88,16 @@ const Button = styled.button`
     })}
 `
 
-const Demo = styled.div`
-    position : fixed;
-    top : 20px;
-    left :0px;
-    width : 99vw;
-    height : 92vh;
-    overflow-y: auto;
-    display : ${props => props.scrollEnabled ? 'none' : 'flex'};
-    flex-direction : column;
-    background-color : #f2f2f2;
-    padding : 10px 20px;
-    ${maxitab({
-        top : '0',
-        height : '100vh',
-    })}
-`
-
-const Cross = styled.img`
-    cursor : pointer;
-    width : 30px;
-    position : absolute;
-    right :5%;
-    padding : 5px;
-    border-radius : 10px;
-    border : 3px solid red;
-    cursor : pointer;
-    transition : all 0.25s ease-in;
-    &:hover{
-        transform : scale(1.1);
-        background-color : #ffafaf;
-        transition : all 0.25s ease-in;
-    }
-    ${minitab({
-        left : '45%',
-        right : '0%',
-        margin : '20px',
-    })}
-    ${miniimobile({
-        left : '41%',
-    })}
-`
-const DemoView = styled.div`
-    display : flex;
-    justify-content : center;
-    align-items : center;
-    ${maxitab({
-        flexDirection : 'column',
-    })}
-`
-
-const WebGIF1 = styled.video`
-    width : 40%;
-    height : auto;
-    margin : 20px;
-    margin-top : 50px;
-    border-radius : 30px;
-    ${minitab({
-        width : '65%',
-        marginTop : '100px',
-    })}
-    ${miniimobile({
-        width : '85%',
-    })}
-`
-
-const WebGIF2 = styled.video`
-    width : 40%;
-    height : auto;
-    margin : 20px;
-    margin-top : 50px;
-    border-radius : 30px;
-    ${minitab({
-        width : '65%',
-    })}
-    ${miniimobile({
-        width : '85%',
-    })}
-`
-
-const CodeLinks = styled.div`
-    display : flex;
-    justify-content : center;
-    align-items : center;
-`
-
-const FrontEnd = styled.button`
-    padding : 10px 20px;
-    font-size : 18px;
-    border : none;
-    background-color : black;
-    color : white;
-    border-radius : 10px;
-    font-weight : bold;
-    margin : 20px;
-    cursor : pointer;
-    transition : all 0.25s ease-in;
-    &:hover{
-        transform : scale(1.05);
-        transition : all 0.25s ease-in;
-        color : black;
-        background-color : white;
-        box-shadow : 0px 0px 10px 2px black;
-    }
-`
-
-const BackEnd = styled.button`
-    padding : 10px 20px;
-    font-size : 18px;
-    border : none;
-    background-color : black;
-    color : white;
-    border-radius : 10px;
-    font-weight : bold;
-    margin : 20px;
-    cursor : pointer;
-    transition : all 0.25s ease-in;
-    &:hover{
-        transform : scale(1.05);
-        transition : all 0.25s ease-in;
-        color : black;
-        background-color : white;
-        box-shadow : 0px 0px 10px 2px black;
-    }
-`
-
-const TechStack = styled.div`
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-`
-
-const TechTitle = styled.div`
-    font-size : 35px;
-    font-weight : bold;
-    text-decoration : underline;
-`
-const TechLogoContainer = styled.div`
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    justify-content: center;
-    align-items: center;
-`
-
-const Logo = styled.img`
-    width: 70px;
-    height: auto; 
-    margin: 5px;
-`
 const Myproject = () => {
-    // State management
-    const [scrollEnabled, setScrollEnabled] = useState(true);
-    const [currIndex, setCurrIndex] = useState(0);
-    const [viewLoader, setViewLoader] = useState(true);
-    
-    // Effect for updating demo videos
-    useEffect(() => {
-        const webGIF1 = document.getElementById('webGIF1');
-        const webGIF2 = document.getElementById('webGIF2');
-        if (webGIF1 && webGIF2 && viewLoader === false) {
-            webGIF1.src = DemoData[currIndex].desk;
-            webGIF2.src = DemoData[currIndex].mob;
-        }
-    }, [currIndex, viewLoader]);
 
-    // Event handlers
-    const handleScroll = (idx) => {
-        setCurrIndex(idx);
-        setTimeout(() => {
-            setViewLoader(false);
-        }, 4000);
-        setScrollEnabled(!scrollEnabled);
-        document.body.style.overflow = scrollEnabled ? 'hidden' : 'auto';
-        document.getElementById('main').style.opacity = scrollEnabled ? '20%' : '100%';
-    };
-    const handleScrollCross = () => {
-        setCurrIndex(0);
-        setViewLoader(true);
-        setScrollEnabled(!scrollEnabled);
-        document.body.style.overflow = scrollEnabled ? 'hidden' : 'auto';
-        document.getElementById('main').style.opacity = scrollEnabled ? '20%' : '100%';
-    };
+    const navigate = useNavigate();
 
-    // Rendering project items
+    const handleNavigate = (item, currIdx) => {
+        navigate('/project', {
+          state: { item, currIdx }
+        });
+      };      
+
     return (
         <>
             <Container id='main'>
@@ -280,43 +106,19 @@ const Myproject = () => {
                         <SerialNo>{item.id}</SerialNo>
                         <Wrapper>
                             <ImageContainer>
-                                <Image src={item.image}/>
+                                <Image currId = {item.currIdx} src={item.image}/>
                             </ImageContainer>
                             <InfoContainer>
                                 <Title>{item.title}</Title>
                                 <Desc>{item.desc1}<br/>{item.desc2}<br/> {item.desc3}<br/>{item.desc4}<br/>{item.desc5}</Desc>
                                 <Buttons>
-                                    <Button onClick={() => handleScroll(idx)}>DEMO</Button>
+                                    <Button onClick={() => handleNavigate(item, item.currIdx)}>Know More</Button>
                                 </Buttons>
                             </InfoContainer>
                         </Wrapper>
                     </>
                 ))}
             </Container>
-            <Demo scrollEnabled={scrollEnabled}>
-                <Cross onClick={() => handleScrollCross()} src={RedCross}/>
-                {viewLoader === false ? (
-                    <DemoView>
-                        <WebGIF1 id="webGIF1" autoPlay loop muted></WebGIF1>
-                        <WebGIF2 id="webGIF2" autoPlay loop muted></WebGIF2>
-                    </DemoView>
-                ) : ''}
-                {viewLoader === true ? <RotatingLoader/> : ''}
-                <CodeLinks>
-                    <Link to={DemoData[currIndex].frontend_link} target='_blank'><FrontEnd>{'<> Frontend'}</FrontEnd></Link>
-                    {DemoData[currIndex].backend_link !== "" && <Link to={DemoData[currIndex].backend_link} target='_blank'> <BackEnd>{'<> Backend'}</BackEnd></Link>}
-                </CodeLinks>
-                <br />
-                <TechStack>
-                    <TechTitle>Tech Stacks</TechTitle>
-                    <br />
-                    <TechLogoContainer>
-                        {DemoData[currIndex].techStack.map((item, index) => ( 
-                            <Logo key={index} src={item.tech} />
-                        ))}
-                    </TechLogoContainer>
-                </TechStack>
-            </Demo>
         </>
     );
 }

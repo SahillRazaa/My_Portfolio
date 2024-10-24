@@ -16,7 +16,7 @@ const MainPage = () => {
     <>
     <Body/>
     <CustomCursor/>
-        <HeroSection/>
+    <HeroSection/>
     </>
   );
 };
