@@ -53,15 +53,24 @@ const Row = styled.div`
   margin-bottom : 100px;
 `;
 
+
 const Image = styled.img`
-  max-width: ${props =>  props.currId === 2 ? '400px' : '600px'};
+  flex: 1;
+  max-width: ${(props) => 
+    props.currId === 2
+      ? '250px' 
+      :  props.flag === 'true' ? '500px' : '600px'};
   height: auto;
   object-fit: contain;
+  border-radius: 25px;
 `;
 
+
 const Info = styled.div`
+  flex : 1;
   max-width: 500px;
   padding: 20px;
+  margin : 50px;
 `;
 
 const InfoDesc = styled.p`
@@ -78,6 +87,16 @@ const StyledLink = styled(Link)`
   font-size: 20px;
   border-radius: 10px;
 `;
+
+const NewBox = styled.div`
+  width : 100%;
+  height : 6px;
+  background-color : black;
+`
+
+const InfoTitle = styled.h2`
+
+`
 
 const Project_Desc = () => {
   const location = useLocation();
@@ -104,7 +123,12 @@ const Project_Desc = () => {
             <Details>{project.title}</Details>
 
             <Title>Description</Title>
-            <Details>{project.desc}</Details>
+            <Details>{project.desc.split('\n').map((line, index) => (
+                    <span key={index}>
+                        {line}
+                        <br />
+                    </span>
+                ))}</Details>
 
             <Title>Duration</Title>
             <Details>{project.duration}</Details>
@@ -121,37 +145,42 @@ const Project_Desc = () => {
                 Click Here
               </StyledLink>
             </Title>
-            <Title>
+            {project.backEnd && <Title>
               GitHub BackEnd Link:{" "}
               <StyledLink to={project.backEnd} target="_blank">
                 Click Here
               </StyledLink>
-            </Title>
+            </Title>}
           </ProjectDetails>
 
           <br />
           <br />
 
           <LowerContainer>
-            {project.explainations.map((explaination) => (
+            {project.explainations.map((explaination, idx) => (
               explaination.explain.map((ex, index) => (<>
                 <Row key={index}>
                   {index % 2 !== 0 ? 
                   <>            
-                  <Image currId = {currIdx} src={ex.image} alt="Project Screenshot" />
+                  <Image flag = {ex.flag} currId = {currIdx} src={ex.image} alt="Project Screenshot" />
+                  {currIdx === 2 && <Image idx = {idx} index = {index} currId = {currIdx} src={ex.extraImg} alt="Project Screenshot" />}
                   <Info>
+                    <InfoTitle>{ex.title}</InfoTitle>
                     <InfoDesc>{ex.explain1}</InfoDesc>
                     <InfoDesc>{ex.explain2}</InfoDesc>
                     <InfoDesc>{ex.explain3}</InfoDesc>
                   </Info> </>:
                   <><Info>
+                    <InfoTitle>{ex.title}</InfoTitle>
                     <InfoDesc>{ex.explain1}</InfoDesc>
                     <InfoDesc>{ex.explain2}</InfoDesc>
                     <InfoDesc>{ex.explain3}</InfoDesc>
                   </Info>
-                  <Image currId = {currIdx} src={ex.image} alt="Project Screenshot" />
+                  <Image idx = {idx} index = {index} currId = {currIdx} src={ex.image} alt="Project Screenshot" />
+                  {currIdx === 2 && <Image currId = {currIdx} src={ex.extraImg} alt="Project Screenshot" />}
                   </>
                   }
+                  <NewBox></NewBox>
                 </Row>
                 </>
               ))
@@ -161,7 +190,7 @@ const Project_Desc = () => {
         <Contact />
         </>
       ) : (
-        <p>No project data available</p>
+        <p>Sorry This is still under construction</p>
       )}
     </div>
   );

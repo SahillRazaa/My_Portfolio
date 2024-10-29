@@ -22,6 +22,7 @@ import Hamburger from '../assets/Images/icons8-hamburger-menu-50.png'
 import CrossHam from '../assets/Images/icons8-cross-48.png'
 import Doodle2 from '../assets/Images/Web-capture-7-12-2023-94721-www-figma-com-removebg-preview.png'
 import Doodle1 from '../assets/Images/Web-capture-7-12-2023-94920-www-figma-com-removebg-preview.png'
+import Achievements from './leetcode';
 
 // Styled Components for the HeroSection component
 const Container = styled.div`
@@ -670,6 +671,7 @@ const HeroSection = () => {
             <MyTechStack />
             <ProjectHead />
             <Myproject />
+            <Achievements/>
             <Aboutme />
             <Contact />
         </>
