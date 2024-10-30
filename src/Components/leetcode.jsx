@@ -1,5 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
+import { contactlap, maximobile, miniimobile, miniminimobile, minitab } from '../responvise';
 
 const Container = styled.div`
   display: flex;
@@ -24,6 +25,15 @@ const Title = styled.h1`
   font-size: 4rem;
   color: black;
   margin-bottom: 20px;
+  ${contactlap({
+    fontSize: "3rem",
+  })}
+  ${minitab({
+    fontSize: "2rem",
+  })}
+  ${miniimobile({
+    fontSize: "1.2rem",
+  })}
 `;
 
 const Card = styled.div`
@@ -40,6 +50,12 @@ const CardTitle = styled.h2`
   font-size: 1.5rem;
   color: white;
   margin-bottom: 10px;
+  ${maximobile({
+    fontSize: "1rem"
+  })}
+  ${miniminimobile({
+    fontSize: "0.7rem"
+  })}
 `;
 
 const CardContent = styled.p`
