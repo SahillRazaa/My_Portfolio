@@ -4,12 +4,11 @@ import styled from 'styled-components';
 import { ProjectData } from '../Project_data/data';
 import Contact from '../Components/Contact';
 import { useEffect } from 'react';
+import { contactlap } from '../responvise';
 
 const Container = styled.div`
-  padding: 30px;
-  max-width: 1300px;
+  width : 90vw;
   margin: 0 auto;
-  width: 100%;
 `;
 
 const MainTitle = styled.h1`
@@ -30,10 +29,8 @@ const Title = styled.h2`
 `;
 
 const Details = styled.p`
-  width: 100%;
-  max-width: 1200px;
-  text-align: justify;
-  margin-bottom: 20px;
+  width: 90%;
+  text-align: start;
   font-size: 22px;
 `;
 
@@ -51,6 +48,9 @@ const Row = styled.div`
   justify-content: center;
   gap: 20px;
   margin-bottom : 100px;
+  ${contactlap`
+    flex-direction : column;
+  `}
 `;
 
 
@@ -58,24 +58,28 @@ const Image = styled.img`
   flex: 1;
   max-width: ${(props) => 
     props.currId === 2
-      ? '250px' 
-      :  props.flag === 'true' ? '500px' : '600px'};
+      ? '20%' 
+      : props.flag === 'true' ? '35%' : '45%'};
   height: auto;
   object-fit: contain;
   border-radius: 25px;
-`;
 
+  ${contactlap`
+    max-width: 60%;
+  `}
+`;
 
 const Info = styled.div`
   flex : 1;
   max-width: 500px;
   padding: 20px;
   margin : 50px;
+  height : auto;
 `;
 
 const InfoDesc = styled.p`
   margin-bottom: 10px;
-  text-align: justify;
+  text-align: start;
   font-size : 20px;
 `;
 
@@ -86,6 +90,13 @@ const StyledLink = styled(Link)`
   padding: 5px 15px;
   font-size: 20px;
   border-radius: 10px;
+  &:hover{
+    transform : scale(1.05);
+    transition : all 0.25s ease-in;
+    color : black;
+    background-color : transparent;
+    box-shadow : 0px 0px 10px 2px black;
+  }
 `;
 
 const NewBox = styled.div`
@@ -97,6 +108,25 @@ const NewBox = styled.div`
 const InfoTitle = styled.h2`
 
 `
+
+const VideoTitle = styled.h2`
+    font-size: 30px;
+    font-weight : bold;
+    text-align : center;
+`
+
+const VideoContainer = styled.div`
+  display: flex;
+  justify-content: center;
+  iframe {
+    width: 60%;
+    height: 400px;
+    border: none;
+    border-radius: 10px;
+    margin-bottom : 100px;
+  }
+`;
+
 
 const Project_Desc = () => {
   const location = useLocation();
@@ -139,16 +169,16 @@ const Project_Desc = () => {
             <Title>Tech Stacks</Title>
             <Details>{project.stacks}</Details>
 
-            <Title>
+            {project.frontEnd && <Title>
               GitHub FrontEnd Link:{" "}
               <StyledLink to={project.frontEnd} target="_blank">
-                Click Here
+                Here
               </StyledLink>
-            </Title>
+            </Title>}
             {project.backEnd && <Title>
               GitHub BackEnd Link:{" "}
               <StyledLink to={project.backEnd} target="_blank">
-                Click Here
+                Here
               </StyledLink>
             </Title>}
           </ProjectDetails>
@@ -186,6 +216,15 @@ const Project_Desc = () => {
               ))
             ))}
           </LowerContainer>
+          <VideoTitle>Want to know more? See this YouTube Video</VideoTitle>
+          <VideoContainer>
+              <iframe
+                src={project.youtubeId}
+                title="YouTube video player"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                allowFullScreen
+              ></iframe>
+          </VideoContainer>
         </Container>
         <Contact />
         </>
