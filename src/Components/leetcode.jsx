@@ -7,15 +7,15 @@ const Container = styled.div`
   justify-content: center;
   align-items: center;
   padding: 20px;
-  background-color: black;
-  min-height: 100vh;
+  background-color: white;
+  min-height: 80vh;
 `;
 
 const InnerContainer = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;
-  background-color: white;
+  background-color: black;
   padding: 20px;
   border-radius: 15px;
   width: 80%;
@@ -23,7 +23,7 @@ const InnerContainer = styled.div`
 
 const Title = styled.h1`
   font-size: 4rem;
-  color: black;
+  color: white;
   margin-bottom: 20px;
   ${contactlap({
     fontSize: "3rem",
@@ -37,7 +37,7 @@ const Title = styled.h1`
 `;
 
 const Card = styled.div`
-  background-color: black;
+  background-color: white;
   border-radius: 10px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   width: 40%;
@@ -48,7 +48,7 @@ const Card = styled.div`
 
 const CardTitle = styled.h2`
   font-size: 1.5rem;
-  color: white;
+  color: black;
   margin-bottom: 10px;
   ${maximobile({
     fontSize: "1rem"
@@ -60,7 +60,7 @@ const CardTitle = styled.h2`
 
 const CardContent = styled.p`
   font-size: 1rem;
-  color: #666;
+  color: black;
 `;
 
 const LinkButton = styled.a`
@@ -68,15 +68,15 @@ const LinkButton = styled.a`
   margin-top: 10px;
   padding: 8px 16px;
   font-size: 0.9rem;
-  color: black;
-  background-color: white;
+  color: white;
+  background-color: black;
   border-radius: 5px;
   text-decoration: none;
   transition: background-color 0.3s;
   &:hover {
-    background-color: black;
-    box-shadow : 0px 0px 20px 5px white;
-    color : white;
+    background-color: white;
+    box-shadow : 0px 0px 20px 5px black;
+    color : black;
   }
 `;
 

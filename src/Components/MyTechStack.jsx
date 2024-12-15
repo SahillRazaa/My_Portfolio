@@ -1,153 +1,145 @@
 import React from 'react';
 import { styled } from 'styled-components';
-import { motion, useAnimation } from "framer-motion";
-import { useInView } from "react-intersection-observer";
-import { useEffect } from "react";
-import { Link } from 'react-router-dom';
-import { maxitab, minilap } from '../responvise';
-import ReactImage from '../assets/Images/react.png'
-import JavaScript from '../assets/Images/javascript.png'
-import HtmlImage from '../assets/Images/html.png'
-import CssImage from '../assets/Images/css.png'
-import NodeJsImage from '../assets/Images/nodejs.png'
-import FlutterImage from '../assets/Images/flutter.png'
-import MongoDB from '../assets/Images/mongo.png'
-import CPlusImage from '../assets/Images/c++.png'
-import Dart from '../assets/Images/dart.png'
-import GoogleApi from '../assets/Images/GApi.png'
-import CImage from '../assets/Images/cimage.png'
-import PythonImage from '../assets/Images/pythonimage.png'
+import ReactImage from '../assets/Images/react.png';
+import JavaScript from '../assets/Images/javascript.png';
+import HtmlImage from '../assets/Images/html.png';
+import CssImage from '../assets/Images/css.png';
+import NodeJsImage from '../assets/Images/nodejs.png';
+import FlutterImage from '../assets/Images/flutter.png';
+import MongoDB from '../assets/Images/mongo.png';
+import CPlusImage from '../assets/Images/c++.png';
+import Dart from '../assets/Images/dart.png';
+import GoogleApi from '../assets/Images/GApi.png';
+import CImage from '../assets/Images/cimage.png';
+import PythonImage from '../assets/Images/pythonimage.png';
+import { maximobile, miniminimobile, minitab } from '../responvise';
 
-// Styled components for styling the UI elements
 const Container = styled.div`
-    width: 99vw;
-    height: auto;
-    padding-bottom: 50px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-`;
-
-const Wrapper = styled.div`
-    width: 90%;
-    height: auto;
-    z-index: 2;
-    position: relative;
-    display: flex;
-    justify-content: center;
-    align-items: center; 
-    overflow: hidden;
-    background-color: #f9f9fa;
-    border-radius: 50px;
-    padding-bottom: 30px;
+  width: 100vw;
+  height: 60vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: white;
+  overflow: hidden;
+  position : relative;
+  ${maximobile({
+    height : '50vh',
+  })}
+  ${miniminimobile ({
+    height : '40vh',
+  })}
 `;
 
 const TitleContainer = styled.div`
-    height: auto;
+  position: absolute;
+  top: 30px;
+  text-align: center;
 `;
 
-const Text = styled.p`
-    position: absolute;
-    top: 0px;
-    left: 11%;
-    right: 11%;
-    text-align: center;
-    font-size: 60px;
-    font-weight: bolder;
-    ${minilap({
-        top: '10px',
-        fontSize: '50px',
-    })}
-    ${maxitab({
-        top: '20px',
-        fontSize: '40px',
-    })}
+const Text = styled.h1`
+  font-size: 5rem;
+  font-weight: bold;
+  color: black;
+  text-shadow: 2px 2px 5px black;
+  ${minitab ({
+    fontSize : '4rem',
+  })}
+  ${maximobile ({
+    fontSize : '3.5rem',
+  })}
+  ${miniminimobile ({
+    fontSize : '2.5rem',
+  })}
 `;
 
-const TechContainer = styled.div`
-    width: 62%;
-    height: auto;
-    margin-top: 170px;
-    margin-bottom: 20px;
-    background-color: black;
-    border-radius: 20px;
-    display: flex;
-    flex-wrap: wrap;
-    padding: 20px 10px;
-    align-items: center;
-    justify-content: center;
-`;
+const LoopContainer = styled.div`
+  position : absolute;
+  bottom : 30%;
+  display: flex;
+  width: 200%;
+  animation: loop 15s linear infinite;
 
-const Stack = styled.img`
-    width: 60px;
-    margin: 10px;
-    cursor: pointer;
-    transition: all 0.25s ease-out;
-    &:hover{
-        transform: scale(1.2);
-        transition: all 0.25s ease-in;
-        opacity: 0.8;
+  @keyframes loop {
+    0% {
+      transform: translateX(0);
     }
+    100% {
+      transform: translateX(-50%);
+    }
+  }
+  ${maximobile ({
+    animation: 'loop 5s linear infinite',
+    bottom : '20%',
+  })}
+  
 `;
 
-// Variants for animation
-const boxVariant = {
-    visible: { opacity: 1, transition: { duration: 2 } },
-    hidden: { opacity: 0 }
-};
+const TechStack = styled.div`
+  display: flex;
+  justify-content: space-evenly;
+  flex-shrink: 0; 
+`;
+
+const StackImage = styled.img`
+  width: 80px;
+  height: 80px;
+  margin: 0;
+  padding: 0px 40px;
+  transition: transform 0.2s ease-in-out;
+  &:hover {
+    transform: scale(1.2);
+  }
+  ${minitab ({
+    width : '100px',
+    height : '100px',
+  })}
+  ${maximobile ({
+    padding : '0px 30px',
+  })}
+   ${miniminimobile ({
+    width : '60px',
+    height : '60px',
+  })}
+`;
 
 const MyTechStack = () => {
-    // Animation controls
-    const control = useAnimation();
-    // Intersection observer hook to detect when the component comes into view
-    const [ref, inView] = useInView();
+  const techStackImages = [
+    ReactImage,
+    JavaScript,
+    HtmlImage,
+    CssImage,
+    NodeJsImage,
+    FlutterImage,
+    Dart,
+    GoogleApi,
+    MongoDB,
+    CPlusImage,
+    CImage,
+    PythonImage,
+  ];
 
-    // Trigger animation when component comes into view
-    useEffect(() => {
-        if (inView) {
-            control.start("visible");
-        } else {
-            control.start("hidden");
-        }
-    }, [control, inView]);
-
-    return (
-        <div style={{ backgroundColor: "black", width: "99vw" }}>
-            {/* Apply animation to the entire component */}
-            <motion.div 
-                variants={boxVariant}
-                initial="hidden"
-                animate={control}
-            >
-                {/* Container for the entire section */}
-                <Container>
-                    <Wrapper ref={ref}>
-                        {/* Container for the title */}
-                        <TitleContainer>
-                            {/* Title text with styling */}
-                            <Text>These are my <b style={{textShadow: "-3px -3px 10px black, 3px -3px 10px black, -3px 3px 10px black, 3px 3px 10px black", color: "white"}}>TECH STACKS</b></Text>
-                        </TitleContainer>
-                        {/* Container for the technology stack icons */}
-                        <TechContainer>
-                            {/* Links to technology resources */}
-                            <Link to="https://react.dev/learn" target='_blank'><Stack src={ReactImage}/></Link>
-                            <Link to="https://developer.mozilla.org/en-US/docs/Web/javascript" target='_blank'><Stack src={JavaScript}/></Link>
-                            <Link to="https://developer.mozilla.org/en-US/docs/Web/HTML" target='_blank'><Stack src={HtmlImage}/></Link>
-                            <Link to="https://developer.mozilla.org/en-US/docs/Web/CSS" target='_blank'><Stack src={CssImage}/></Link>
-                            <Link to="https://www.freecodecamp.org/news/what-is-node-js/" target='_blank'><Stack src={NodeJsImage}/></Link>
-                            <Link to="https://docs.flutter.dev/" target='_blank'><Stack src={FlutterImage}/></Link>
-                            <Link to="https://dart.dev/guides" target='_blank'><Stack src={Dart}/></Link>
-                            <Link to="https://docs.flutter.dev/" target='_blank'><Stack src={GoogleApi}/></Link>
-                            <Link to="https://www.mongodb.com/what-is-mongodb" target='_blank'><Stack src={MongoDB}/></Link>
-                            <Link to="https://www.programiz.com/cpp-programming" target='_blank'><Stack src={CPlusImage}/></Link>
-                            <Link to="https://www.w3schools.com/c/index.php" target='_blank'><Stack src={CImage}/></Link>
-                            <Link to="https://www.python.org/doc/" target='_blank'><Stack src={PythonImage}/></Link>
-                        </TechContainer>
-                    </Wrapper>
-                </Container>
-            </motion.div>
-        </div>
-    );
-}
+  return (
+    <Container>
+      <TitleContainer>
+        <Text>My Tech Stacks</Text>
+      </TitleContainer>
+      <LoopContainer>
+        {/* First instance of images */}
+        <TechStack>
+          {techStackImages.map((image, index) => (
+            <StackImage key={index} src={image} alt={`Tech ${index}`} />
+          ))}
+        </TechStack>
+        {/* Second instance of images for seamless loop */}
+        <TechStack>
+          {techStackImages.map((image, index) => (
+            <StackImage key={index + techStackImages.length} src={image} alt={`Tech ${index}`} />
+          ))}
+        </TechStack>
+      </LoopContainer>
+    </Container>
+  );
+};
 
 export default MyTechStack;

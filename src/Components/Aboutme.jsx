@@ -6,7 +6,6 @@ import { useInView } from "react-intersection-observer";
 import { contactlap, maxilap, maxitab, miniimobile, minitab } from '../responvise';
 import { Link } from 'react-router-dom';
 
-// Styled components for the Aboutme section
 const Container = styled.div`
     width: 99vw;
     height: auto;
@@ -24,6 +23,9 @@ const Wrapper = styled.div`
 const ImageContainer = styled.div`
     padding: 3%;
     flex: 1;
+    ${minitab ({
+        display : "none",
+    })}
 `;
 
 const Image = styled.img`
@@ -34,6 +36,9 @@ const Image = styled.img`
 const InfoContainer = styled.div`
     flex: 1;
     margin-top: 10px;
+    ${minitab({
+        // flex : "0",
+    })}
 `;
 
 const Title1 = styled.p`
@@ -51,10 +56,7 @@ const Title1 = styled.p`
         fontSize: '25px',
     })}
     ${minitab({
-        fontSize: '20px',
-    })}
-    ${miniimobile({
-        fontSize: '13px',
+        textAlign : 'center',
     })}
 `;
 
@@ -73,10 +75,7 @@ const Title2 = styled.p`
         fontSize: '25px',
     })}
     ${minitab({
-        fontSize: '20px',
-    })}
-    ${miniimobile({
-        fontSize: '13px',
+        textAlign : 'center',
     })}
 `;
 
@@ -98,12 +97,7 @@ const Desc1 = styled.p`
         lineHeight: '15px',
     })}
     ${minitab({
-        fontSize: '8px',
-        lineHeight: '10px',
-    })}
-    ${miniimobile({
-        fontSize: '6px',
-        lineHeight: '7px',
+        padding : '0px 25px',
     })}
 `;
 
@@ -120,17 +114,8 @@ const Desc2 = styled.p`
     ${contactlap({
         fontSize: '13px',
     })}
-    ${maxitab({
-        fontSize: '10px',
-        lineHeight: '15px',
-    })}
     ${minitab({
-        fontSize: '8px',
-        lineHeight: '10px',
-    })}
-    ${miniimobile({
-        fontSize: '6px',
-        lineHeight: '7px',
+        padding : '0px 25px',
     })}
 `;
 
@@ -153,14 +138,18 @@ const ResumeButton = styled.button`
         fontSize: '15px',
     })}
     ${minitab({
-        fontSize: '12px',
-        padding: '7px 13px',
-    })}
-    ${miniimobile({
-        fontSize: '8px',
-        padding: '5px 13px',
+        marginBottom : '20px',
+        width : '30%',
     })}
 `;
+
+const ButtonCont = styled.div`
+    ${minitab({
+        display : 'flex',
+        alignItems : 'center',
+        justifyContent : 'center',
+    })}
+`
 
 // Variants for motion animation
 const boxVariant = {
@@ -200,9 +189,9 @@ const Aboutme = () => {
                             {/* Descriptions */}
                             <Desc1>Hey there, I'm Sahil Raza Ansari, currently a third-year student pursuing BTech in Electronics and Communication Engineering (ECE). Since my early school days, I've been captivated by the world of coding, which ignited a passion for software development alongside my academic pursuits.</Desc1>
                             <Desc2>Despite my main focus on ECE, my curiosity for software development has been unrelenting. I've dedicated considerable time to exploring various programming languages and diving into coding projects that fuel my learning and growth.</Desc2>
-                            {/* Resume button */}
+                            
                             <Link to="https://www.canva.com/design/DAGU16-wyWk/vYWqWs6nihJe9Hvwph9UAQ/view?utm_content=DAGU16-wyWk&utm_campaign=designshare&utm_medium=link&utm_source=editor" target='_blank'>
-                                <ResumeButton>Resume</ResumeButton>
+                                <ButtonCont><ResumeButton >Resume</ResumeButton></ButtonCont>
                             </Link>
                         </InfoContainer>
                     </Wrapper>
