@@ -673,7 +673,7 @@ const HeroSection = () => {
             <Myproject />
             <Achievements/>
             <Aboutme />
-            <Contact />
+            <Contact home = 'true'/>
         </>
     );
 }

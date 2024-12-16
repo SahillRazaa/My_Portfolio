@@ -7,15 +7,16 @@ import { useNavigate } from 'react-router-dom';
 const Container = styled.div`
     padding: 0% 2%;
     padding-bottom: 10%;
-    margin-top : -100px;    
+    margin-top: -100px;    
     background-color: black;
-
 `;
+
 const SerialNo = styled.p`
     font-size: 30px;
     font-weight: bold;
     color: white;
 `;
+
 const Wrapper = styled.div`
     margin-left: 5%;
     margin-right: 5%;
@@ -39,12 +40,14 @@ const Image = styled.img`
     border-radius: 20px;
     box-shadow: 0px 0px 10px 2px white;
 `;
+
 const InfoContainer = styled.div`
     flex: 1;
     ${minitab({
-        marginTop : '40px',
+        marginTop: '40px',
     })}
 `;
+
 const Title = styled.h3`
     font-size: 50px;
     line-height: 0px;
@@ -56,6 +59,7 @@ const Title = styled.h3`
         fontSize: '25px',
     })}
 `;
+
 const Desc = styled.p`
     font-size: 18px;
     line-height: 20px;
@@ -72,9 +76,11 @@ const Desc = styled.p`
         width: '90%',
     })}
 `;
+
 const Buttons = styled.div`
     display: flex;
 `;
+
 const Button = styled.button`
     border: none;
     color: black; 
@@ -98,37 +104,32 @@ const Button = styled.button`
 `;
 
 const Myproject = () => {
-
     const navigate = useNavigate();
 
-    const handleNavigate = (item, currIdx) => {
-        navigate('/project', {
-            state: { item, currIdx }
-        });
+    const handleNavigate = (currIdx) => {
+        navigate(`/project/${currIdx}`); // Navigate using the project ID
     };
 
     return (
-        <>
-            <Container id='main'>
-                {MyProjects.map((item, idx) => (
-                    <>
-                        <SerialNo>{item.id}</SerialNo>
-                        <Wrapper>
-                            <ImageContainer>
-                                <Image currId={item.currIdx} src={item.image} />
-                            </ImageContainer>
-                            <InfoContainer>
-                                <Title>{item.title}</Title>
-                                <Desc>{item.desc1}<br />{item.desc2}<br /> {item.desc3}<br />{item.desc4}<br />{item.desc5}</Desc>
-                                <Buttons>
-                                    <Button onClick={() => handleNavigate(item, item.currIdx)}>Know More</Button>
-                                </Buttons>
-                            </InfoContainer>
-                        </Wrapper>
-                    </>
-                ))}
-            </Container>
-        </>
+        <Container id='main'>
+            {MyProjects.map((item) => (
+                <div key={item.id}>
+                    <SerialNo>{item.id}</SerialNo>
+                    <Wrapper>
+                        <ImageContainer>
+                            <Image currId={item.currIdx} src={item.image} alt={item.title} />
+                        </ImageContainer>
+                        <InfoContainer>
+                            <Title>{item.title}</Title>
+                            <Desc>{item.desc1}<br />{item.desc2}<br />{item.desc3}<br />{item.desc4}<br />{item.desc5}</Desc>
+                            <Buttons>
+                                <Button onClick={() => handleNavigate(item.currIdx)}>Know More</Button>
+                            </Buttons>
+                        </InfoContainer>
+                    </Wrapper>
+                </div>
+            ))}
+        </Container>
     );
 };
 

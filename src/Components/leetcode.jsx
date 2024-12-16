@@ -7,6 +7,7 @@ const Container = styled.div`
   justify-content: center;
   align-items: center;
   padding: 20px;
+  // width : 9vw; 
   background-color: white;
   min-height: 80vh;
 `;

@@ -13,7 +13,7 @@ import LinkedIn from '../assets/Images/icons8-linkedin-48.png';
 
 // Styled components for the Contact component
 const Container = styled.div`
-    width : 99vw;
+    width : ${props => props.home == 'true' ? '99vw' : '90vw'};
     height : auto;
     background-color : #f9f9fa;
     line-height : 0px;
@@ -286,7 +286,7 @@ const boxVariant = {
     hidden: { opacity: 0}
 };
 
-const Contact = () => {
+const Contact = ({home}) => {
     // State and refs for form handling and animation control
     const emailInputRef = useRef(null);
     const [email, setEmail] = useState('');
@@ -350,7 +350,7 @@ const Contact = () => {
     }, [control, inView]);
 
     return (
-        <Container id='contact'>
+        <Container id='contact' home = {home}>
             {/* Alert component */}
             <Alert alert = {alert}/>
             <motion.div 

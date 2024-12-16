@@ -13,7 +13,7 @@ function App() {
     <Router>
       <Routes>
         <Route exact path='/' element = {<MainPage/>}></Route>
-        <Route exact path = '/project' element = {<Project_Desc/>}></Route>
+        <Route exact path = '/project/:id' element = {<Project_Desc/>}></Route>
       </Routes>
     </Router>
   );

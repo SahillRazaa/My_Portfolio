@@ -5,7 +5,7 @@ import { useInView } from "react-intersection-observer";
 import { useEffect } from "react";
 
 const Container = styled.div`
-    width: 99vw;
+    width: 98.9vw;
     height: 40vh;
     background-color: black;
     display: flex;

@@ -15,7 +15,7 @@ import PythonImage from '../assets/Images/pythonimage.png';
 import { maximobile, miniminimobile, minitab } from '../responvise';
 
 const Container = styled.div`
-  width: 100vw;
+  width: 99vw;
   height: 60vh;
   display: flex;
   justify-content: center;
