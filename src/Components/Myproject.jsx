@@ -36,7 +36,7 @@ const ImageContainer = styled.div`
 `;
 
 const Image = styled.img`
-    width: ${props => props.currId === 2 ? '45%' : '73%'};
+    width: ${props => props.currId === 4 ? '45%' : '73%'};
     border-radius: 20px;
     box-shadow: 0px 0px 10px 2px white;
 `;

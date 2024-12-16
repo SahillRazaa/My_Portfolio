@@ -92,6 +92,11 @@ const achievements = [
     content: 'Solved 125 DSA problems',
     link: 'https://www.geeksforgeeks.org/user/connectwith7k0/'
   },
+  {
+    title: 'Codeforces',
+    content: 'Solved 30 DSA problems',
+    link: 'https://codeforces.com/profile/connectwithsahil007'
+  },
 ];
 
 const Achievements = () => {
