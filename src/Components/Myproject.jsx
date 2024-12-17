@@ -8,7 +8,7 @@ import { display, fontSize, lineHeight } from '@mui/system';
 const Container = styled.div`
     position: relative;
     width: calc(99vw);
-    height: calc(99vh);
+    height: auto;
     border-radius : 0px;
     overflow: hidden;
 `;
@@ -45,7 +45,10 @@ const Content = styled.div`
     justify-content: center;
     height: 100%;
     text-align: justify;
-    
+    margin-bottom : 50px;
+    ${minitab ({
+        marginBottom : '100px'
+    })}
 `;
 
 const LeftCont = styled.div`
@@ -134,9 +137,6 @@ const ProjectNav = styled.div`
         bottom : '20px',
         right : '10px',
     })} 
-    ${miniminimobile ({
-        gridTemplateColumns : 'repeat(2, 1fr)'
-    })} 
 `;
 
 const ImageButton = styled.img`
@@ -155,6 +155,7 @@ const ImageButton = styled.img`
         height : '60px',
     })}
     ${maxitab ({
+        
         width : '70px',
         height : '50px',
     })}
