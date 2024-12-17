@@ -226,15 +226,21 @@ const Project_Desc = () => {
             ))}
           </LowerContainer>
 
-          <VideoTitle>Want to know more? See this YouTube Video</VideoTitle>
-          <VideoContainer>
+          {project.youtubeId && <VideoTitle>Want to know more? See this YouTube Video</VideoTitle>}
+          {project.youtubeId && <VideoContainer>
             <iframe
               src={project.youtubeId}
               title="YouTube video player"
               allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
               allowFullScreen
             ></iframe>
-          </VideoContainer>
+          </VideoContainer>}
+          {project.webLink && <VideoTitle style={{
+            marginBottom : '150px',
+          }}>Want to know more?<a style={{
+            textDecoration : 'none',
+            color : 'blue',
+          }} target='_blank' href={project.webLink}> click here </a></VideoTitle>}
         </>
       ) : (
         <p>Sorry, this is still under construction.</p>

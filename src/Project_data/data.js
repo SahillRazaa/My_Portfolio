@@ -56,18 +56,11 @@ import Proj3_9 from '../assets/ProjectImage/proj3_9.png'
 import Proj3_10 from '../assets/ProjectImage/proj3_10.jpg'
 
 import Proj4_1 from '../assets/ProjectImage/tourism4_1.png'
-import Proj4_2 from '../assets/ProjectImage/tourism4_2.png'
 import Proj4_3 from '../assets/ProjectImage/tourism4_3.png'
-import Proj4_4 from '../assets/ProjectImage/tourism4_4.png'
 import Proj4_5 from '../assets/ProjectImage/tourism4_5.png'
-import Proj4_6 from '../assets/ProjectImage/tourism4_6.png'
 import Proj4_7 from '../assets/ProjectImage/tourism4_7.png'
-import Proj4_8 from '../assets/ProjectImage/tourism4_8.png'
 import Proj4_9 from '../assets/ProjectImage/tourism4_9.png'
-import Proj4_10 from '../assets/ProjectImage/tourism4_10.png'
 import Proj4_11 from '../assets/ProjectImage/tourism4_11.png'
-import Proj4_12 from '../assets/ProjectImage/tourism4_12.png'
-import Proj4_13 from '../assets/ProjectImage/tourism4_13.png'
 import Proj4_14 from '../assets/ProjectImage/tourism4_14.png'
 
 import Proj5_1 from '../assets/ProjectImage/ludo5_1.png'
@@ -81,6 +74,7 @@ export const MyProjects = [
         currIdx : 1,
         title: "Online Ludo",
         image : Ludo_ss,
+        desc: 'This Ludo project is an interactive and engaging multiplayer game built using React.js. It offers a modern, responsive design that adapts seamlessly across devices, ensuring a smooth gaming experience on both desktop and mobile platforms.',
         desc1 : "● Online Ludo, A project that leverages React state management (useState, useEffect) to manage the game’s state, including the dice value, player positions, rankings, and current player. It also persists the game state in localStorage for saving and resuming the game.",
         desc2 : "● It uses styled-components to create responsive and styled UI elements for the game board and controls. Different screen sizes are handled via responsive media queries in the screen1, screen2, and screen3 functions, ensuring that the layout adapts to different devices.",
         desc3 : '● The functionality handles rolling the dice with animation and updates the game board accordingly. The rollDice function manages the dice roll, updates the player’s position, and ensures that the game progresses based on the dice result and the current player.',
@@ -90,35 +84,37 @@ export const MyProjects = [
         currIdx : 2,
         title: "Tourism Analysis",
         image : Tourism_ss,
-        desc1 : "● The winners are displayed based on the winners array, which is retrieved from the location.state. For each winner, a dynamic Winner component is rendered with their position (1st, 2nd, 3rd) and their color (capitalized), utilizing the getOrdinalSuffix function to format the place value.",
-        desc2 : "● A button is provided to restart the game. When clicked, it triggers the restartGame function, which resets the game’s context, and then navigates back to the home screen, allowing users to begin a new game.",
-        desc3 : '● Each winner’s display is styled with a background color and shadow that corresponds to their color. The winner’s position and color are displayed in a large, bold font, making the page visually engaging and celebratory.',
+        desc: 'This tourism data analysis project is focused on understanding and predicting trends in tourism in India. By analyzing a large dataset containing tourist information, such as the number of tourists, country of origin, arrival month, mode of travel, age group, and more',
+        desc1 : "● This tourism data analysis project is focused on understanding and predicting trends in tourism in India by analyzing a large dataset containing tourist information, such as the number of tourists, country of origin, arrival month, mode of travel, age group, and more.",
+        desc2 : "● It explores variations before and during the COVID-19 pandemic, helping identify key factors that influenced tourism behavior.",
+        desc3 : '● the project leverages predictive analytics to forecast future tourism trends, providing a forward-looking view that can help optimize policies and strategies in the tourism sector. ',
     },
     {
         id: '03.',
         currIdx : 3,
         title: "WAMS 2025",
         image : Proj1_1,
-        desc1 : "● Developed WAMS 2025, a live website for the IEEE upcoming conference, using React to deliver real-time updates and notifications, enhancing attendee engagement.",
-        desc2 : "● Built a fully responsive and user-friendly interface, ensuring accessibility across devices with a streamlined, intuitive navigation experience.",
-        desc3 : '● Implemented a dynamic "Call for Papers" section, VIP accommodation info, and sponsor highlights, providing essential details for conference participants.',
+        desc : 'WAMS 2025 is a live, interactive website built with React for the upcoming IEEE conference. The application leverages real-time data fetching to provide users with timely updates and important notifications, enhancing overall engagement.',
+        desc1 : "● WAMS 2025 is a live, interactive website built with React for the upcoming IEEE conference. The application leverages real-time data fetching to provide users with timely updates and important notifications, enhancing overall engagement.",
+        desc2 : "● The site features a responsive design, ensuring seamless usability across various devices. Utilizing React’s component-based architecture, the interface is optimized for performance and user experience, with dynamic elements that keep content fresh and visually appealing.",
+        desc3 : '● Data management is efficiently handled, allowing for easy navigation through a well-structured layout. This setup supports essential features like submission guidelines and accommodation information for attendees.',
     },
     {
         id: '04.',
         currIdx : 4,
         title: "Music App",
         image : Soul_ss,
-        desc1 : "● Soul Healer is a Flutter-based music app that streams music from YouTube and allows classification by artist, genre, and language.",
-        desc2 : "● YouTube Integration helps Seamless music search and playback using the YouTube API.",
+        desc : 'Soul Healer is a Flutter-based music app that integrates with the YouTube API to provide a seamless listening experience. Users are greeted with a splash screen, followed by a home page showcasing trending songs and recently played tracks.',
+        desc1 : "● Soul Healer is a Flutter-based music app that streams music from YouTube and allows classification by artist, genre, and language. Custom Themes offers 5-6 different theme color options for a personalized user experience.",
+        desc2 : "● YouTube Integration helps Seamless music search and playback using the YouTube API. It is Built using popular packages like just_audio, provider, youtube_explode_dart, flutter_local_notifications, and more.",
         desc3 : "● Favorites & Saved state are present for Users to add songs to their favorites with persistent state across sessions.",
-        desc4 : "● Custom Themes offers 5-6 different theme color options for a personalized user experience.",
-        desc5 : "● It is Built using popular packages like just_audio, provider, youtube_explode_dart, flutter_local_notifications, and more.",
     },
     {
       id: '05.',
       currIdx : 5,
-      title: "Ecommerce Website",
+      title: "Ecommerce",
       image : Ecommerce_ss,
+      desc : 'E-Commerce Website is a React.js-based platform that features an elegant login/register UI connected to a robust backend using Express and MongoDB Atlas, with JWT for secure authentication.',
       desc1 : "● Developed Sahil, a MERN-based full-stack eCommerce app with secure user authentication, login features, and data persistence using JWT and Express for session management.",
       desc2 : "● Implemented React Redux for efficient state management of user and cart states, with data saved in MongoDB for seamless user experience and persistent cart functionality.",
       desc3 : "● Integrated product filtering, allowing users to search and filter products based on various criteria,enhancing usability and product discovery.",
@@ -126,11 +122,12 @@ export const MyProjects = [
     {
         id: '06.',
         currIdx : 6,
-        title: "Portfolio Website",
+        title: "Portfolio",
         image : PortFolio_ss,
-        desc1 : "● Sahil Raza, a Portfolio Web app is made with ReactJs.",
-        desc2 : "● Fresh UI Experience and Smooth transitions between each sections of the WebPage.",
-        desc3 : "● Minimalist color selection to highlight essential part of the Portfolio.",
+        desc : 'The portfolio web app for Sahil Raza is a sleek and modern single-page application built using ReactJS, focusing on delivering a seamless user experience with a fresh, visually appealing UI. It employs a minimalist design philosophy, using a carefully selected color palette to emphasize key sections.',
+        desc1 : "● The portfolio web app for Sahil Raza is a sleek and modern single-page application built using ReactJS, focusing on delivering a seamless user experience with a fresh, visually appealing UI.",
+        desc2 : "●  Smooth transitions enhance the user journey as they navigate through each segment, offering a cohesive browsing experience.Leveraging tools like Framer Motion and React Spring, the site incorporates fluid animations that bring life to the interface.",
+        desc3 : "● To optimize navigation, react-router-dom and react-router-hash-link enable smooth internal linking, while react-scroll and react-parallax enhance user interaction with subtle scrolling effects.",
     },
 ]
 
@@ -187,10 +184,11 @@ export const ProjectData = [
     title : 'Online Ludo',
     desc : 'This Ludo project is an interactive and engaging multiplayer game built using React.js. It offers a modern, responsive design that adapts seamlessly across devices, ensuring a smooth gaming experience on both desktop and mobile platforms. The game features real-time player interaction, where users can compete against each other in a classic Ludo board setup. Players move their tokens around the board based on dice rolls, aiming to be the first to reach the home area.\n\nThe project incorporates styled-components for a clean, visually appealing interface, and it leverages React Router for smooth navigation between different screens, such as the game board and the game-over/congratulations screen. With a user-friendly interface, intuitive controls, and real-time updates, this Ludo game provides a fun and competitive environment for players to enjoy a nostalgic game in a modern setting. Additionally, it includes a restart functionality, allowing players to begin a new game effortlessly. This Ludo project brings the excitement of a classic board game to the web, with a focus on usability, responsiveness, and an enjoyable user experience.',
     duration : '1 week',
-    youtubeId: 'https://www.youtube.com/embed/xRRgVEVYqg8',
+    youtubeId: '',
+    webLink : 'https://online-ludo-sahil.onrender.com/',
     dates : 'December 10, 2024 - December 18, 2024',
     stacks : 'ReactJs, HTML, CSS, JavaScript, React-router-dom',
-    frontEnd : '',
+    frontEnd : 'https://github.com/SahillRazaa/Online_Ludo',
     backEnd : '',
     explainations : [
       {
@@ -237,11 +235,12 @@ export const ProjectData = [
     title : 'Tourism Data Analysis',
     desc : 'This tourism data analysis project is focused on understanding and predicting trends in tourism in India. By analyzing a large dataset containing tourist information, such as the number of tourists, country of origin, arrival month, mode of travel, age group, and more, the project provides valuable insights into tourism patterns across different regions and time periods. It explores variations before and during the COVID-19 pandemic, helping identify key factors that influenced tourism behavior.\n\nThe project utilizes Python for data cleaning, transformation, and visualization, ensuring the data is accurate and ready for analysis. Libraries such as Pandas are used for data manipulation, while Matplotlib and Seaborn are employed to create insightful and visually engaging charts. Key findings from this analysis include identifying trends in tourist arrivals, popular travel modes, and seasonal variations, offering actionable insights for government and industry stakeholders.\n\nAdditionally, the project leverages predictive analytics to forecast future tourism trends, providing a forward-looking view that can help optimize policies and strategies in the tourism sector. Overall, this tourism data analysis project is a comprehensive approach to understanding and planning for India tourism sector, combining data science techniques with real-world applications to enhance decision-making and improve tourism experiences.',
     duration : 'Three weeks',
-    youtubeId: 'https://www.youtube.com/embed/xRRgVEVYqg8',
+    youtubeId: '',
+    webLink : 'https://indian-tourism-sahil.onrender.com/',
     dates : 'October 20, 2024 - November 15, 2024',
     stacks : 'Python, Pandas, NumPy, Matplotlib & Seaborn',
     frontEnd : '',
-    backEnd : '',
+    backEnd : 'https://github.com/SahillRazaa/Indian_Tourism',
     explainations : [
       {
         id1 : 1,
@@ -334,6 +333,7 @@ export const ProjectData = [
     desc : 'WAMS 2025 is a live, interactive website built with React for the upcoming IEEE conference. The application leverages real-time data fetching to provide users with timely updates and important notifications, enhancing overall engagement.\n\nThe site features a responsive design, ensuring seamless usability across various devices. Utilizing React’s component-based architecture, the interface is optimized for performance and user experience, with dynamic elements that keep content fresh and visually appealing.\n\nData management is efficiently handled, allowing for easy navigation through a well-structured layout. This setup supports essential features like submission guidelines and accommodation information for attendees.\n\nOverall, WAMS 2025 integrates advanced web technologies to create an essential resource for conference participants, promoting collaboration and accessibility.',
     duration : 'Two months',
     youtubeId: 'https://www.youtube.com/embed/xRRgVEVYqg8',
+    webLink : 'https://wams2025.com/',
     dates : 'March 2024 - June 2024',
     stacks : 'ReactJs, HTML, CSS, JavaScript, React-router-dom',
     frontEnd : '',
