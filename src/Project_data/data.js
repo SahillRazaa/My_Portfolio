@@ -9,14 +9,15 @@ import HtmlImage from '../assets/Images/html.png'
 import CssImage from '../assets/Images/css.png'
 import NodeJsImage from '../assets/Images/nodejs.png'
 import MongoDBImage from '../assets/Images/mongo.png'
-import PortFolio_ss from '../assets/Images/portfolio_ss.jpg'
-import Ecommerce_ss from '../assets/Images/ecommerce_ss.jpg'
-import Soul_ss from '../assets/Images/soul_ss.jpg'
+import PortFolio_ss from '../assets/Images/portfolio_ss.png'
+import Ecommerce_ss from '../assets/Images/ecommerce_ss.png'
+import Soul_ss from '../assets/Images/soul_ss.png'
 import Dart from '../assets/Images/dart.png'
 import Flutter from '../assets/Images/flutter.png'
 import GoogleApi from '../assets/Images/GApi.png'
 import Tourism_ss from '../assets/Images/tourism_ss.png'
 import Ludo_ss from '../assets/Images/ludo_ss.png'
+import WamsSS from '../assets/Images/wams_ss.png'
 
 import Proj1_1 from '../assets/ProjectImage/proj1_1.png'
 import Proj1_2 from '../assets/ProjectImage/proj1_2.png'
@@ -93,7 +94,7 @@ export const MyProjects = [
         id: '03.',
         currIdx : 3,
         title: "WAMS 2025",
-        image : Proj1_1,
+        image : WamsSS,
         desc : 'WAMS 2025 is a live, interactive website built with React for the upcoming IEEE conference. The application leverages real-time data fetching to provide users with timely updates and important notifications, enhancing overall engagement.',
         desc1 : "● WAMS 2025 is a live, interactive website built with React for the upcoming IEEE conference. The application leverages real-time data fetching to provide users with timely updates and important notifications, enhancing overall engagement.",
         desc2 : "● The site features a responsive design, ensuring seamless usability across various devices. Utilizing React’s component-based architecture, the interface is optimized for performance and user experience, with dynamic elements that keep content fresh and visually appealing.",

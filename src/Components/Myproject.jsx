@@ -2,15 +2,16 @@ import React from 'react';
 import styled from 'styled-components';
 import { MyProjects } from '../Project_data/data';
 import { useNavigate } from 'react-router-dom';
-import { maxitab, minilap, miniminimobile, minitab } from '../responvise';
-import { display, fontSize, lineHeight } from '@mui/system';
+import { minitab } from '../responvise';
 
 const Container = styled.div`
     position: relative;
-    width: calc(99vw);
-    height: auto;
-    border-radius : 0px;
+    width: 100vw;
+    height: 90vh;
     overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
 `;
 
 const BackgroundImage = styled.div`
@@ -22,98 +23,42 @@ const BackgroundImage = styled.div`
     background-image: url(${props => props.image});
     background-size: cover;
     background-position: center;
-    opacity: 0.5; 
     z-index: 1;
-`;
-
-const DarkOverlay = styled.div`
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-color: rgba(0, 0, 0, 0.84);
-    z-index: 2;
 `;
 
 const Content = styled.div`
     position: relative;
     z-index: 2;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    margin-top: 10%;
     color: white;
     padding: 20px;
-    display: flex;
-    justify-content: center;
-    height: 100%;
-    text-align: justify;
-    margin-bottom : 50px;
-    ${minitab ({
-        marginBottom : '100px'
-    })}
-`;
 
-const LeftCont = styled.div`
-    flex : 1;
-    margin : 100px 50px;
-    ${maxitab ({
-        display : 'none'
-    })}
-    ${miniminimobile ({
-        margin : '0px',
-    })}
-`
+    h1 {
+        font-size: 3rem;
+        margin-bottom: 1rem;
+        text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+    }
 
-const RightCont = styled.div`
-    flex : 1;
-    margin : 50px 50px;
-`
-
-const Title = styled.h1`
-    font-size: 80px;
-    color : white;
-    text-shadow: -3px -3px 10px black, 3px -3px 10px black, -3px 3px 10px black, 3px 3px 10px black;
-    ${miniminimobile ({
-        fontSize : '60px',
-    })}
-`;
-
-const Desc = styled.p`
-    font-size: 18px;
-    margin: 10px 0;
-    color :rgb(184, 184, 184);
-    font-weight : bold;
-    line-height : 30px;
-    ${minilap ({
-        fontSize : '15px',
-    })}
-`;
-const DescDesc = styled.p`
-    font-size: 20px;
-    margin: 10px 0;
-    color :rgb(184, 184, 184);
-    font-weight : bold;
-    line-height : 30px;
-    ${maxitab ({
-        fontSize : '30px',
-        lineHeight : '40px',
-    })}
-    ${minitab ({
-        fontSize : '20px',
-        lineHeight : '30px',
-    })}
-    ${miniminimobile ({
-        fontSize : '16px',
-        lineHeight : '25px',
-    })}
+    p {
+        font-size: 1.5rem;
+        margin-bottom: 2rem;
+        max-width: 800px;
+    }
 `;
 
 const ExploreButton = styled.button`
     border: none;
-    color: white; 
+    color: white;
     background-color: black;
-    padding: 10px 20px;
+    font-size: 1.2rem;
+    background-color: black;
+    padding: 15px 20px;
     font-weight: 600;
     border-radius: 10px;
-    margin : 30px 0px;
     cursor: pointer;
     transition: all 0.25s ease-out;
     &:hover {
@@ -125,54 +70,57 @@ const ExploreButton = styled.button`
 `;
 
 const ProjectNav = styled.div`
-    position: absolute;
-    bottom: 50px;
-    right: 30px;
+    position: relative;
+    z-index: 2;
     display: flex;
-    gap: 30px;
-    z-index: 3;
-    ${minitab ({
-        display : 'grid',
-        gridTemplateColumns : 'repeat(3, 1fr)',
-        bottom : '20px',
-        right : '10px',
-    })} 
+    justify-content: center;
+    align-items: center;
+    gap: 15px;
+    padding: 20px;
+    background: rgba(0, 0, 0, 0.5);
+    border-radius: 10px;
+    margin: 0 auto 30px;
+    width: fit-content;
+
+    ${minitab({
+        flexWrap: 'wrap',
+    })}
+`;
+
+const ImageButtonContainer = styled.div`
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 `;
 
 const ImageButton = styled.img`
-    width: 120px; 
-    height: 80px; 
-    border-radius: 10px;
+    width: 100px;
+    height: 70px;
+    border-radius: 8px;
     cursor: pointer;
-    transition: transform 0.2s;
-    box-shadow :  ${props => props.index === props.currentProjectIndex ? '0px 0px 10px 5px #CBA11A' : ''}; 
-    transform: ${props => props.index === props.currentProjectIndex ? 'scale(1.1)' : ''}; 
+    transition: transform 0.3s, box-shadow 0.3s;
+    box-shadow: ${props => props.index === props.currentProjectIndex ? '0px 4px 8px rgba(203, 161, 26, 0.8)' : '0px 2px 4px rgba(0, 0, 0, 0.5)'};
+    transform: ${props => props.index === props.currentProjectIndex ? 'scale(1.1)' : 'scale(1)'};
+
     &:hover {
         transform: scale(1.1);
+        box-shadow: 0px 4px 8px rgba(203, 161, 26, 0.8);
     }
-    ${minilap ({
-        width : '100px',
-        height : '60px',
-    })}
-    ${maxitab ({
-        
-        width : '70px',
-        height : '50px',
-    })}
 `;
 
-const Index = styled.h2`
-    position : absolute;
-    top : 0px;
-    left : 30px;
-    font-size : 50px;
-    color : white;
-    z-index : 3;
-    text-shadow: -3px -3px 10px black, 3px -3px 10px black, -3px 3px 10px black, 3px 3px 10px black;
-    ${miniminimobile ({
-        fontSize : '40px',
-    })}
-`
+const SubNavExploreButton = styled(ExploreButton)`
+    position: absolute;
+    top: -100%;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.3s ease, visibility 0.3s ease;
+
+    ${ImageButtonContainer}:hover & {
+        opacity: 1;
+        visibility: visible;
+    }
+`;
 
 const Myproject = () => {
     const navigate = useNavigate();
@@ -192,28 +140,22 @@ const Myproject = () => {
     return (
         <Container>
             <BackgroundImage image={currentProject.image} />
-            <DarkOverlay />
-            <Index>{currentProject.id}</Index>
             <Content>   
-                <LeftCont>
-                    <Desc>{currentProject.desc1}<br /><br/>{currentProject.desc2}<br /><br/>{currentProject.desc3}<br /><br/></Desc>
-                </LeftCont>
-                <RightCont>
-                    <Title>{currentProject.title}</Title>
-                    <DescDesc>{currentProject.desc}</DescDesc>
-                    <ExploreButton onClick={() => handleNavigate(currentProjectIndex + 1)}>Explore</ExploreButton>
-                </RightCont>
             </Content>
             <ProjectNav>
-            {MyProjects.map((project, index) => (
-                    <ImageButton 
-                        index = {index}
-                        currentProjectIndex = {currentProjectIndex}
-                        key={project.id} 
-                        src={project.image} 
-                        alt={project.title} 
-                        onClick={() => handleChangeProject(index)} 
-                    />
+                {MyProjects.map((project, index) => (
+                    <ImageButtonContainer key={project.id}>
+                        <ImageButton 
+                            index={index}
+                            currentProjectIndex={currentProjectIndex}
+                            src={project.image} 
+                            alt={project.title} 
+                            onClick={() => handleChangeProject(index)} 
+                        />
+                        <SubNavExploreButton onClick={() => handleNavigate(index + 1)}>
+                            Explore
+                        </SubNavExploreButton>
+                    </ImageButtonContainer>
                 ))}
             </ProjectNav>
         </Container>
