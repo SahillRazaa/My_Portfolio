@@ -150,7 +150,7 @@ const Myproject = () => {
                             currentProjectIndex={currentProjectIndex}
                             src={project.image} 
                             alt={project.title} 
-                            onClick={() => handleChangeProject(index)} 
+                            onClick={() => handleChangeProject(project.currIdx)} 
                         />
                         <SubNavExploreButton onClick={() => handleNavigate(index + 1)}>
                             Explore

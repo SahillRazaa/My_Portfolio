@@ -18,6 +18,8 @@ import GoogleApi from '../assets/Images/GApi.png'
 import Tourism_ss from '../assets/Images/tourism_ss.png'
 import Ludo_ss from '../assets/Images/ludo_ss.png'
 import WamsSS from '../assets/Images/wams_ss.png'
+import Plantify_app_ss from '../assets/Images/plantify_mob_ss.png'
+import Plantify_web_ss from '../assets/Images/plantify_web_ss.png'
 
 import Proj1_1 from '../assets/ProjectImage/proj1_1.png'
 import Proj1_2 from '../assets/ProjectImage/proj1_2.png'
@@ -45,6 +47,21 @@ import Proj2_16 from '../assets/ProjectImage/proj2_16.jpg'
 import Proj2_17 from '../assets/ProjectImage/proj2_17.jpg'
 import Proj2_18 from '../assets/ProjectImage/proj2_18.jpg'
 
+import Proj8_1 from '../assets/ProjectImage/proj8_1.jpg'
+import Proj8_2 from '../assets/ProjectImage/proj8_2.jpg'
+import Proj8_3 from '../assets/ProjectImage/proj8_3.jpg'
+import Proj8_4 from '../assets/ProjectImage/proj8_4.jpg'
+import Proj8_5 from '../assets/ProjectImage/proj8_5.jpg'
+import Proj8_6 from '../assets/ProjectImage/proj8_6.jpg'
+import Proj8_7 from '../assets/ProjectImage/proj8_7.jpg'
+import Proj8_8 from '../assets/ProjectImage/proj8_8.jpg'
+import Proj8_9 from '../assets/ProjectImage/proj8_9.jpg'
+import Proj8_10 from '../assets/ProjectImage/proj8_10.jpg'
+import Proj8_11 from '../assets/ProjectImage/proj8_11.jpg'
+import Proj8_12 from '../assets/ProjectImage/proj8_12.jpg'
+import Proj8_13 from '../assets/ProjectImage/proj8_13.jpg'
+import Proj8_14 from '../assets/ProjectImage/proj8_14.jpg'
+
 import Proj3_1 from '../assets/ProjectImage/proj3_1.png'
 import Proj3_2 from '../assets/ProjectImage/proj3_2.png'
 import Proj3_3 from '../assets/ProjectImage/proj3_3.png'
@@ -55,6 +72,13 @@ import Proj3_7 from '../assets/ProjectImage/proj3_7.png'
 import Proj3_8 from '../assets/ProjectImage/proj3_8.png'
 import Proj3_9 from '../assets/ProjectImage/proj3_9.png'
 import Proj3_10 from '../assets/ProjectImage/proj3_10.jpg'
+
+import Proj7_1 from '../assets/ProjectImage/proj7_1.png'
+import Proj7_2 from '../assets/ProjectImage/proj7_2.png'
+import Proj7_3 from '../assets/ProjectImage/proj7_3.png'
+import Proj7_4 from '../assets/ProjectImage/proj7_4.png'
+import Proj7_5 from '../assets/ProjectImage/proj7_5.png'
+import Proj7_6 from '../assets/ProjectImage/proj7_6.png'
 
 import Proj4_1 from '../assets/ProjectImage/tourism4_1.png'
 import Proj4_3 from '../assets/ProjectImage/tourism4_3.png'
@@ -73,62 +97,50 @@ export const MyProjects = [
     {
         id: '01.',
         currIdx : 1,
-        title: "Online Ludo",
-        image : Ludo_ss,
-        desc: 'This Ludo project is an interactive and engaging multiplayer game built using React.js. It offers a modern, responsive design that adapts seamlessly across devices, ensuring a smooth gaming experience on both desktop and mobile platforms.',
-        desc1 : "● Online Ludo, A project that leverages React state management (useState, useEffect) to manage the game’s state, including the dice value, player positions, rankings, and current player. It also persists the game state in localStorage for saving and resuming the game.",
-        desc2 : "● It uses styled-components to create responsive and styled UI elements for the game board and controls. Different screen sizes are handled via responsive media queries in the screen1, screen2, and screen3 functions, ensuring that the layout adapts to different devices.",
-        desc3 : '● The functionality handles rolling the dice with animation and updates the game board accordingly. The rollDice function manages the dice roll, updates the player’s position, and ensures that the game progresses based on the dice result and the current player.',
+        title: "Plantify mobile application",
+        image : Plantify_app_ss,
     },
     {
         id: '02.',
         currIdx : 2,
-        title: "Tourism Analysis",
-        image : Tourism_ss,
-        desc: 'This tourism data analysis project is focused on understanding and predicting trends in tourism in India. By analyzing a large dataset containing tourist information, such as the number of tourists, country of origin, arrival month, mode of travel, age group, and more',
-        desc1 : "● This tourism data analysis project is focused on understanding and predicting trends in tourism in India by analyzing a large dataset containing tourist information, such as the number of tourists, country of origin, arrival month, mode of travel, age group, and more.",
-        desc2 : "● It explores variations before and during the COVID-19 pandemic, helping identify key factors that influenced tourism behavior.",
-        desc3 : '● the project leverages predictive analytics to forecast future tourism trends, providing a forward-looking view that can help optimize policies and strategies in the tourism sector. ',
+        title: "Plantify web application",
+        image : Plantify_web_ss,
     },
     {
         id: '03.',
         currIdx : 3,
-        title: "WAMS 2025",
-        image : WamsSS,
-        desc : 'WAMS 2025 is a live, interactive website built with React for the upcoming IEEE conference. The application leverages real-time data fetching to provide users with timely updates and important notifications, enhancing overall engagement.',
-        desc1 : "● WAMS 2025 is a live, interactive website built with React for the upcoming IEEE conference. The application leverages real-time data fetching to provide users with timely updates and important notifications, enhancing overall engagement.",
-        desc2 : "● The site features a responsive design, ensuring seamless usability across various devices. Utilizing React’s component-based architecture, the interface is optimized for performance and user experience, with dynamic elements that keep content fresh and visually appealing.",
-        desc3 : '● Data management is efficiently handled, allowing for easy navigation through a well-structured layout. This setup supports essential features like submission guidelines and accommodation information for attendees.',
+        title: "Online Ludo",
+        image : Ludo_ss,
     },
     {
         id: '04.',
         currIdx : 4,
-        title: "Music App",
-        image : Soul_ss,
-        desc : 'Soul Healer is a Flutter-based music app that integrates with the YouTube API to provide a seamless listening experience. Users are greeted with a splash screen, followed by a home page showcasing trending songs and recently played tracks.',
-        desc1 : "● Soul Healer is a Flutter-based music app that streams music from YouTube and allows classification by artist, genre, and language. Custom Themes offers 5-6 different theme color options for a personalized user experience.",
-        desc2 : "● YouTube Integration helps Seamless music search and playback using the YouTube API. It is Built using popular packages like just_audio, provider, youtube_explode_dart, flutter_local_notifications, and more.",
-        desc3 : "● Favorites & Saved state are present for Users to add songs to their favorites with persistent state across sessions.",
+        title: "Tourism Analysis",
+        image : Tourism_ss,
     },
     {
-      id: '05.',
-      currIdx : 5,
-      title: "Ecommerce",
-      image : Ecommerce_ss,
-      desc : 'E-Commerce Website is a React.js-based platform that features an elegant login/register UI connected to a robust backend using Express and MongoDB Atlas, with JWT for secure authentication.',
-      desc1 : "● Developed Sahil, a MERN-based full-stack eCommerce app with secure user authentication, login features, and data persistence using JWT and Express for session management.",
-      desc2 : "● Implemented React Redux for efficient state management of user and cart states, with data saved in MongoDB for seamless user experience and persistent cart functionality.",
-      desc3 : "● Integrated product filtering, allowing users to search and filter products based on various criteria,enhancing usability and product discovery.",
+        id: '05.',
+        currIdx : 5,
+        title: "WAMS 2025",
+        image : WamsSS,
     },
     {
         id: '06.',
         currIdx : 6,
+        title: "Music App",
+        image : Soul_ss,
+    },
+    {
+      id: '07.',
+      currIdx : 7,
+      title: "Ecommerce",
+      image : Ecommerce_ss,
+    },
+    {
+        id: '08.',
+        currIdx : 8,
         title: "Portfolio",
         image : PortFolio_ss,
-        desc : 'The portfolio web app for Sahil Raza is a sleek and modern single-page application built using ReactJS, focusing on delivering a seamless user experience with a fresh, visually appealing UI. It employs a minimalist design philosophy, using a carefully selected color palette to emphasize key sections.',
-        desc1 : "● The portfolio web app for Sahil Raza is a sleek and modern single-page application built using ReactJS, focusing on delivering a seamless user experience with a fresh, visually appealing UI.",
-        desc2 : "●  Smooth transitions enhance the user journey as they navigate through each segment, offering a cohesive browsing experience.Leveraging tools like Framer Motion and React Spring, the site incorporates fluid animations that bring life to the interface.",
-        desc3 : "● To optimize navigation, react-router-dom and react-router-hash-link enable smooth internal linking, while react-scroll and react-parallax enhance user interaction with subtle scrolling effects.",
     },
 ]
 
@@ -182,6 +194,176 @@ export const DemoData = [
 export const ProjectData = [
   {
     id : 1,
+    title : 'Plantify mobile application',
+    desc : 'Plantify is a fully functional mobile application developed using Flutter, designed to streamline the plant-selling process. It integrates Firebase for backend services, providing features like user authentication, real-time database operations, and secure data storage. Users can sign up or log in with email and password, with persistent sessions to ensure a seamless experience. The app supports full CRUD operations, enabling users to browse plants, add them to their cart, place orders, and manage their data dynamically. Firebase Realtime Database ensures efficient synchronization between the app and the server for a smooth user experience.\n\nThe app comes packed with essential features such as saving favorite plants for later viewing, a recent items section to revisit previously browsed plants, and powerful filtering options for better searchability. The cart functionality allows users to order plants with ease, and their orders are tracked in the profile section. The settings screen includes a logout option and other user-related preferences, ensuring a comprehensive and user-centric design. State management is handled using solutions like Provider or Bloc, ensuring efficient handling of application logic.\n\nFrom a technical perspective, the app follows a clean architecture with responsive UI layouts for compatibility across devices. Material Design principles are used for intuitive and visually appealing interfaces. The integration with Firebase ensures robust and secure handling of user data, while error handling mechanisms provide a reliable user experience. Overall, Plantify demonstrates a complete implementation of a feature-rich mobile app, highlighting my proficiency in Flutter and Firebase development.',
+    duration : '1 month',
+    youtubeId: '',
+    webLink : '',
+    dates : 'December 06, 2024 - January 06, 2025',
+    stacks : 'Flutter, Firebase, Firebase Realtime Database, Firebase Authentication',
+    frontEnd : '',
+    backEnd : '',
+    explainations : [
+      {
+        id1 : 1,
+        explain : [
+          {
+            id11 : 1,
+            image : Proj8_1,
+            extraImg : Proj8_2,
+            title: "Splash Screen and Start Page",
+            explain1 : "● The splash screen features an engaging animation or logo, giving users a polished first impression and introducing the app's theme (plant-selling) before transitioning to the start page.",
+            explain2 : '● The start page offers a simple, user-friendly interface where users can easily choose to create a new account or log in to an existing one, with clearly labeled buttons for each option.',
+            explain3 : '● Smooth navigation from the splash screen to the start page ensures a fast and seamless experience, allowing users to quickly decide whether to sign up or log in without unnecessary delays.',
+          },
+          {
+            id11 :2,
+            image : Proj8_3,
+            extraImg : Proj8_4,
+            title: " Login Page and Home Screen",
+            explain1 : '● The login page offers a simple and clear authentication process with options to sign in using email/password or Google. After logging in, users are smoothly directed to the home screen to explore plants.',
+            explain2 : '● The home screen features plant categories, popular items, and a dynamic plant listing with clear images and brief descriptions, making browsing intuitive and engaging for users.',
+            explain3 : '● Users can easily search for specific plants and apply filters to narrow down their options by type, price, or other attributes, ensuring a smooth and personalized shopping experience.',
+          },
+        ],
+      },
+      {
+        id1 : 2,
+        explain : [
+          {
+            id11 : 1,
+            image : Proj8_5,
+            extraImg : Proj8_6,
+            title: "Home Page (Additional Options) and Product List Page",
+            explain1 : '● The home screen features sections like "New Items," "Flash Sale," and "Just for You," showcasing curated plant collections based on trends, promotions, or user preferences, to keep the content fresh and engaging.',
+            explain2 : '● The "Just for You" section uses user data to suggest plants based on their browsing history or preferences, offering a personalized shopping experience that keeps users coming back.',
+            explain3 : '● On the product list page, plants are displayed with essential details like price and rating. Filters and sorting options allow users to easily narrow down their choices, ensuring a smooth browsing experience with quick access to product details.',
+          },
+          {
+            id11 : 2,
+            image : Proj8_7,
+            extraImg : Proj8_8,
+            title: "Filter Items in Product List and Wishlist/Add to Favorites",
+            explain1 : '● The product list page offers various filter options, such as price range, plant type, and ratings, allowing users to quickly narrow down their choices and find exactly what they’re looking for.',
+            explain2 : '● Users can add their favorite plants to a wishlist for later viewing, making it easy to keep track of items they’re interested in purchasing or revisiting.',
+            explain3 : '● The "Heart button" option is easily accessible for each product, enabling users to quickly save plants they like with a simple tap, enhancing their shopping experience.',
+          },
+        ],
+      },
+      {
+        id1 : 3,
+        explain : [
+          {
+            id11 : 1,
+            image : Proj8_9,
+            extraImg : Proj8_10,
+            title: "Categories Screen and Cart Screen",
+            explain1 : '● The categories screen displays all available plant categories, making it easy for users to explore different plant types (e.g., indoor, outdoor, succulents) through a clean and organized layout.',
+            explain2 : '● The cart screen offers a comprehensive view of all added items, including their details like price, quantity, and total cost, allowing users to easily review and modify their selections before checkout.',
+            explain3 : '● Users can quickly navigate between the categories screen and their cart with simple, intuitive buttons, providing a seamless shopping flow from browsing to finalizing their purchase.',
+          },
+          {
+            id11 : 2,
+            image : Proj8_11,
+            extraImg : Proj8_12,
+            title: "Checkout Screen and Profile Screen",
+            explain1 : '● The checkout screen provides a user-friendly flow, where users can review their cart, enter shipping information, select payment options, and confirm their order with clear prompts.',
+            explain2 : '● Users can see a detailed order summary, including product names, prices, and delivery details, before finalizing the purchase, ensuring they have all necessary information for a smooth transaction.',
+            explain3 : '● The profile screen allows users to view and manage their personal details, order history, and current order status, offering easy access to track past and ongoing purchases while maintaining account information.',
+          },  
+        ],
+      },
+      {
+        id1 : 4,
+        explain : [
+          {
+            id11 : 1,
+            image : Proj8_13,
+            extraImg : Proj8_14,
+            title: "Settings Screen and Create Account Page",
+            explain1 : '● The create account page provides an easy sign-up process where users can register using their email, password, ensuring a smooth start to their experience.',
+            explain2 : '● The settings screen allows users to manage their account preferences, such as updating their email, changing their password, or modifying notification settings, giving them control over their app experience.',
+            explain3 : '● A prominent logout button is available in the settings screen, enabling users to securely log out, while keeping their personal information and account details safe, ensuring a secure session management process.',
+          },
+        ],
+      },
+    ]
+  },
+  {
+    id : 2,
+    title : 'Plantify web application',
+    desc : 'The website version of Plantify serves as a plant-selling platform where users can browse and purchase various types of plants. The homepage, built using React, offers an attractive and clean design to present different plant categories, featured products, and popular plants. It provides easy navigation to various sections such as the plant listing, product details, and user authentication options. The website’s layout is modern, focusing on aesthetics and user experience, designed to engage users and encourage them to explore the plant collection.\n\nWhile the current version of the website is not responsive, it effectively showcases the app’s core features and design. The plant list page allows users to view detailed information about each plant, including images, descriptions, and prices. There is a filtering system to help users sort through different plants based on categories, price range, and other attributes. Although it’s in the early stages, the homepage and plant listing sections reflect the core functionality and design principles behind the app’s mobile version.\n\nIn terms of user interaction, the website offers a simple way for users to browse products and engage with the content. The focus is on delivering a clean, intuitive layout with plans to make it fully responsive across devices in the future. The website mirrors much of the functionality from the mobile app, aiming to give users a similar experience whether they are using the mobile app or the website.',
+    duration : '1 week',
+    youtubeId: '',
+    webLink : 'https://plantify-web-app.onrender.com/',
+    dates : 'December 25, 2024 - January 02, 2025',
+    stacks : 'ReactJs, HTML, CSS, JavaScript',
+    frontEnd : 'https://github.com/SahillRazaa/Plantify_web_app',
+    backEnd : '',
+    explainations : [
+      {
+        id1 : 1,
+        explain : [
+          {
+            id11 : 1,
+            image : Proj7_1,
+            title: "Home Section",
+            flag : 'false',
+            explain1 : '● The topmost part of the homepage features the website name (Plantify) and a clean navbar for easy access to different pages (e.g., Home, Shop, About, Contact).',
+            explain2 : '● A slider displays three highlighted plants for purchase, allowing users to easily browse and click through to product pages.',
+            explain3 : '●  The layout is designed to immediately capture user attention, with plant images and a clear call-to-action for purchasing or exploring more.',
+          },
+          {
+            id11 :2,
+            image : Proj7_2,
+            title: " Our Trendy Plants Section",
+            flag : 'false',
+            explain1 : '● This section features a selection of trendy plants that are currently in demand, attracting users with visually appealing images and descriptions.',
+            explain2 : '● Plant images may include hover effects such as showing prices or brief details to encourage user engagement.',
+            explain3 : '● The plants showcased in this section are handpicked based on trends, making them highly relevant to the audience and enticing to plant enthusiasts.',
+          },
+          {
+            id11 : 1,
+            image : Proj7_3,
+            title: "Our Top Selling Section",
+            flag : 'false',
+            explain1 : '● This section displays the top-selling plants, helping users find popular and highly rated products quickly.',
+            explain2 : '● Each plant listing includes customer reviews and ratings to guide potential buyers in their decision-making process.',
+            explain3 : '● Top sellers are strategically positioned to ensure they catch the attention of new visitors and encourage purchases.',
+          },
+          {
+            id11 :2,
+            image : Proj7_4,
+            title: "Our Testimonials Section",
+            flag : 'false',
+            explain1 : '● The testimonials section showcases customer reviews and experiences, providing social proof and building trust with potential buyers.',
+            explain2 : '● Testimonials are presented in a visually appealing format with customer names, photos, and short quotes highlighting satisfaction with Plantify.',
+            explain3 : '● A variety of customer testimonials help appeal to different user types, from first-time buyers to regular plant collectors.',
+          },
+          {
+            id11 : 1,
+            image : Proj7_5,
+            title: " Our Best Ones Section",
+            flag : 'false',
+            explain1 : '● This section highlights the best and most popular plants, curated based on quality, rarity, or demand.',
+            explain2 : '● Special offers, discounts, or limited-time deals on featured plants are displayed to incentivize users to make a purchase.',
+            explain3 : '● Each plant in this section has a prominent "Shop Now" or "Learn More" button to guide users directly to the product page or checkout.',
+          },
+          {
+            id11 :2,
+            image : Proj7_6,
+            title: " Footer",
+            flag : 'false',
+            explain1 : '● The footer contains important links such as Privacy Policy, Terms of Service, and Contact Information for easy access.',
+            explain2 : '● Links to Plantify’s social media accounts (Instagram, Facebook, Twitter, etc.) are included, encouraging users to follow and engage with the brand.',
+            explain3 : '● An option to subscribe to the newsletter is provided, allowing users to stay updated on promotions, new products, and plant care tips.',
+          },
+        ],
+      },
+    ]
+  },
+  {
+    id : 3,
     title : 'Online Ludo',
     desc : 'This Ludo project is an interactive and engaging multiplayer game built using React.js. It offers a modern, responsive design that adapts seamlessly across devices, ensuring a smooth gaming experience on both desktop and mobile platforms. The game features real-time player interaction, where users can compete against each other in a classic Ludo board setup. Players move their tokens around the board based on dice rolls, aiming to be the first to reach the home area.\n\nThe project incorporates styled-components for a clean, visually appealing interface, and it leverages React Router for smooth navigation between different screens, such as the game board and the game-over/congratulations screen. With a user-friendly interface, intuitive controls, and real-time updates, this Ludo game provides a fun and competitive environment for players to enjoy a nostalgic game in a modern setting. Additionally, it includes a restart functionality, allowing players to begin a new game effortlessly. This Ludo project brings the excitement of a classic board game to the web, with a focus on usability, responsiveness, and an enjoyable user experience.',
     duration : '1 week',
@@ -232,7 +414,7 @@ export const ProjectData = [
     ]
   },
   {
-    id : 2,
+    id : 4,
     title : 'Tourism Data Analysis',
     desc : 'This tourism data analysis project is focused on understanding and predicting trends in tourism in India. By analyzing a large dataset containing tourist information, such as the number of tourists, country of origin, arrival month, mode of travel, age group, and more, the project provides valuable insights into tourism patterns across different regions and time periods. It explores variations before and during the COVID-19 pandemic, helping identify key factors that influenced tourism behavior.\n\nThe project utilizes Python for data cleaning, transformation, and visualization, ensuring the data is accurate and ready for analysis. Libraries such as Pandas are used for data manipulation, while Matplotlib and Seaborn are employed to create insightful and visually engaging charts. Key findings from this analysis include identifying trends in tourist arrivals, popular travel modes, and seasonal variations, offering actionable insights for government and industry stakeholders.\n\nAdditionally, the project leverages predictive analytics to forecast future tourism trends, providing a forward-looking view that can help optimize policies and strategies in the tourism sector. Overall, this tourism data analysis project is a comprehensive approach to understanding and planning for India tourism sector, combining data science techniques with real-world applications to enhance decision-making and improve tourism experiences.',
     duration : 'Three weeks',
@@ -329,7 +511,7 @@ export const ProjectData = [
     ]
   },
   {
-    id : 3,
+    id : 5,
     title : 'Wams 2025',
     desc : 'WAMS 2025 is a live, interactive website built with React for the upcoming IEEE conference. The application leverages real-time data fetching to provide users with timely updates and important notifications, enhancing overall engagement.\n\nThe site features a responsive design, ensuring seamless usability across various devices. Utilizing React’s component-based architecture, the interface is optimized for performance and user experience, with dynamic elements that keep content fresh and visually appealing.\n\nData management is efficiently handled, allowing for easy navigation through a well-structured layout. This setup supports essential features like submission guidelines and accommodation information for attendees.\n\nOverall, WAMS 2025 integrates advanced web technologies to create an essential resource for conference participants, promoting collaboration and accessibility.',
     duration : 'Two months',
@@ -412,7 +594,7 @@ export const ProjectData = [
     ]
   },
   {
-    id : 4,
+    id : 6,
     title : 'Soul Healer',
     desc : 'Soul Healer is a Flutter-based music app that integrates with the YouTube API to provide a seamless listening experience. Users are greeted with a splash screen, followed by a home page showcasing trending songs and recently played tracks. \n\nThe app features real-time song searching, genre filtering, and year-based playlists, all managed using provider for smooth state management. Users can personalize their experience with customizable themes and easily access a persistent music player controller for quick playback controls. \n\nAn engaging feedback system allows users to share their thoughts in a game-like format, contributing to ongoing app enhancements. Leveraging packages like just_audio and cached_network_image, Soul Healer combines performance and user-friendly design for an immersive music experience.',
     duration : 'Three months',
@@ -531,7 +713,7 @@ export const ProjectData = [
     ]
   },
   {
-    id : 5,
+    id : 7,
     title : 'Ecommerce website',
     desc : 'E-Commerce Website is a React.js-based platform that features an elegant login/register UI connected to a robust backend using Express and MongoDB Atlas, with JWT for secure authentication.\n\nThe homepage showcases products through an interactive slider and a user-friendly navigation bar. A comprehensive products page allows sorting and filtering, while a "Best Deals" section highlights discounted items for quick access.\n\nWith a persistent cart managed by React Persist and Redux for state management, users enjoy a seamless shopping experience. The Stripe integration ensures secure payment processing, and the profile page offers easy access to order history and account settings.\n\nFully responsive, the website provides a consistent experience across all devices, maintaining accessibility and visual appeal.',
     duration : 'Three months',
@@ -660,7 +842,7 @@ export const ProjectData = [
     ]
   },
   {
-    id : 6,
+    id : 8,
     title : 'Portfolio: Sahil Raza',
     desc : 'The portfolio web app for Sahil Raza is a sleek and modern single-page application built using ReactJS, focusing on delivering a seamless user experience with a fresh, visually appealing UI. It employs a minimalist design philosophy, using a carefully selected color palette to emphasize key sections. Smooth transitions enhance the user journey as they navigate through each segment, offering a cohesive browsing experience.\n\nLeveraging tools like Framer Motion and React Spring, the site incorporates fluid animations that bring life to the interface, while the @mui/material library provides modular and responsive components that are both aesthetically pleasing and efficient. styled-components and @emotion libraries are used for custom styling, ensuring that every detail aligns with the apps minimalistic design goals. The inclusion of axios allows easy handling of data interactions, while emailjs facilitates seamless email services directly from the website.\n\nTo optimize navigation, react-router-dom and react-router-hash-link enable smooth internal linking, while react-scroll and react-parallax enhance user interaction with subtle scrolling effects. This app is deployable with gh-pages for easy GitHub hosting and performance tracking using web-vitals, ensuring both smooth functionality and effective online presence for Sahil’s portfolio.',
     duration : 'Two months',

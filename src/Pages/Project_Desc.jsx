@@ -72,7 +72,7 @@ const Row = styled.div`
 
 const Image = styled.img`
   flex: 1;
-  max-width: ${(props) => (props.currId === 4 ? '20%' : props.flag === 'true' ? '35%' : '45%')};
+  max-width: ${(props) => ((props.currId === 1 || props.currId === 6) ? '20%' : props.flag === 'true' ? '35%' : '45%')};
   height: auto;
   object-fit: contain;
   border-radius: 15px;
@@ -201,7 +201,7 @@ const Project_Desc = () => {
                   {index % 2 !== 0 ? (
                     <>
                       <Image flag={ex.flag} currId={currIdx} src={ex.image} alt="Project Screenshot" />
-                      {currIdx === 4 && <Image idx={idx} index={index} currId={currIdx} src={ex.extraImg} alt="Project Screenshot" />}
+                      {(currIdx === 1 || currIdx === 6) && <Image idx={idx} index={index} currId={currIdx} src={ex.extraImg} alt="Project Screenshot" />}
                       <Info>
                         <Title>{ex.title}</Title>
                         <InfoDesc>{ex.explain1}</InfoDesc>
@@ -218,7 +218,7 @@ const Project_Desc = () => {
                         <InfoDesc>{ex.explain3}</InfoDesc>
                       </Info>
                       <Image idx={idx} index={index} currId={currIdx} src={ex.image} alt="Project Screenshot" />
-                      {currIdx === 4 && <Image currId={currIdx} src={ex.extraImg} alt="Project Screenshot" />}
+                      {(currIdx === 1 || currIdx === 6) && <Image currId={currIdx} src={ex.extraImg} alt="Project Screenshot" />}
                     </>
                   )}
                 </Row>
