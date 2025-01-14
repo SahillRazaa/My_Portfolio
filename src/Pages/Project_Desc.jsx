@@ -3,13 +3,12 @@ import styled from 'styled-components';
 import { ProjectData } from '../Project_data/data';
 import Contact from '../Components/Contact';
 import { useEffect } from 'react';
-import { contactlap } from '../responvise';
 
 const Container = styled.div`
   width: 90vw;
   margin: 0 auto;
   padding: 20px;
-  background-color: #f9f9f9;
+  background: linear-gradient(to right, ${props => props.color}, black);
   border-radius: 10px;
   box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
 `;
@@ -141,12 +140,14 @@ const Project_Desc = () => {
   const currIdx = parseInt(id, 10);
   const project = ProjectData.find((proj) => proj.id === currIdx);
 
+  const colors = ['#ebdc1a', '#54be06', '#b76abd', '#ff994e', '#d3d871', '#3152bb', '#41b982', '#d8d8d8'];
+
   useEffect(() => {
     window.scrollTo(0, 0);
   }, []);
 
   return (
-    <Container>
+    <Container color = {colors[currIdx - 1]}>
       {project ? (
         <>
           <MainTitle>

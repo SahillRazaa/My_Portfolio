@@ -201,7 +201,7 @@ export const ProjectData = [
     webLink : '',
     dates : 'December 06, 2024 - January 06, 2025',
     stacks : 'Flutter, Firebase, Firebase Realtime Database, Firebase Authentication',
-    frontEnd : '',
+    frontEnd : 'https://github.com/SahillRazaa/plantify_mob_app',
     backEnd : '',
     explainations : [
       {
